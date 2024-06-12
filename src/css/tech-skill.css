@@ -34,7 +34,6 @@
 
 .marquee__line {
   display: flex;
-  gap: 56px;
   flex-shrink: 0;
   margin: 0;
   padding: 32px 15px;
@@ -96,11 +95,21 @@
   }
 }
 @keyframes marqueeLine {
-  from {
+  0% {
     transform: translateX(0);
   }
 
-  to {
+  100% {
     transform: translateX(-100%);
+  }
+}
+
+@keyframes marqueeLineReverse {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
   }
 }
