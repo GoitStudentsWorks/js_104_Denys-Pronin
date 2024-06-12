@@ -1,0 +1,95 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.tech-skill_section {
+  overflow: hidden;
+}
+
+.marquee {
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  background-color: var(--accent-extra-color);
+  font-family: Poppins;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 40px;
+  letter-spacing: 0.5px;
+  z-index: 1;
+}
+
+.marguee_extra {
+  background-color: var(--extra-bg-color);
+  transform: rotate(2deg);
+  z-index: 0;
+  color: var(--accent-color);
+}
+
+.marquee__inner {
+  display: flex;
+}
+
+.marquee__line {
+  display: flex;
+  flex-shrink: 0;
+  margin: 0;
+  padding: 32px 15px;
+  min-width: 100%;
+  white-space: nowrap;
+  animation-name: marqueeLineReverse;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.marquee__line_reverse {
+  animation-name: marqueeLine;
+}
+
+.marquee__line > li {
+  position: relative;
+  margin-right: 56px;
+}
+
+.marquee__line > li:nth-child(1)::before {
+  display: none;
+}
+
+.marquee__line > li::before {
+  top: 50%;
+  left: -28px;
+  transform: translateY(-50%);
+  position: absolute;
+  content: '';
+  height: 8px;
+  width: 8px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+}
+
+.marquee__line_reverse > li::before {
+  background-color: var(--main-text-color);
+}
+
+@keyframes marqueeLine {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes marqueeLineReverse {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
