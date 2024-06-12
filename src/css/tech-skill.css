@@ -1,0 +1,57 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.tech-skill_section {
+  overflow: hidden;
+}
+
+.marquee {
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  background-color: var(--accent-extra-color);
+  font-family: Poppins;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 40px;
+  letter-spacing: 0.5px;
+  z-index: 1;
+}
+
+.marguee_extra {
+  background-color: var(--extra-bg-color);
+  transform: rotate(2deg);
+  z-index: 0;
+  color: var(--accent-color);
+}
+
+.marquee__inner {
+  display: flex;
+}
+
+.marquee__line {
+  display: flex;
+  gap: 56px;
+  flex-shrink: 0;
+  margin: 0;
+  padding: 32px 15px;
+  min-width: 100%;
+  white-space: nowrap;
+  animation-name: marqueeLine;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes marqueeLine {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
