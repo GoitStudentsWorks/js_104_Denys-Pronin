@@ -2,10 +2,33 @@ a {
   text-decoration: none;
 }
 
+.header-navigation {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
 .header-box {
+  padding: 32px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.header-list {
+  display: flex;
+  gap: 40px;
+  /* display: none; */
+}
+
+.header-list-item {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.03em;
+  /* color: var(--main-text-color); */
+  color: #292929;
 }
 
 .header-logo {
