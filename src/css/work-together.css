@@ -67,6 +67,9 @@ body.dark {
 .work-together-address-item:last-child {
   margin-bottom: 40px;
 }
+.address-icon {
+  fill: var(--accent-color);
+}
 .work-together-address-link {
   color: var(--main-text-color);
   font-family: Poppins;
