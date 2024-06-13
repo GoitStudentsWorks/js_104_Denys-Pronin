@@ -43,12 +43,9 @@ body.dark {
 .title > span {
   color: var(--accent-color);
 }
-.background-image {
-  background-image: url(../img/decor-bg-3.png);
-  color: #009156;
-  width: 100%;
-  background-size: cover;
+.container::before {
 }
+
 .work-together-description {
   color: var(--main-text-color);
   font-family: Poppins;
@@ -211,6 +208,19 @@ body.dark {
     padding: 0 32px;
     margin: 0 auto;
   }
+  .container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 336px;
+    height: 260px;
+    background-image: url('../img/decor-bg-3.png');
+    /* background-size: cover;  */
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+  }
   .title {
     font-size: 108px;
     line-height: 124px;
@@ -219,6 +229,7 @@ body.dark {
   .work-together-description {
     font-size: 20px;
     line-height: 32px; /* 160% */
+    width: 488px;
   }
   .work-together-address {
     flex-direction: row;
@@ -239,6 +250,12 @@ body.dark {
 @media screen and (min-width: 1280px) {
   .title {
     margin-bottom: 80px;
+    width: 507px;
+    height: 248px;
+  }
+  .container::before {
+    width: 526px;
+    height: 408px;
   }
 
   .work-together-description {
