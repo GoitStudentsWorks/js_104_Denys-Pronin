@@ -23,7 +23,7 @@ document
       );
 
       if (response.ok) {
-        showModal('Вашу заявку успішно створено!');
+        showModal();
         document.querySelector('.work-together-form').reset();
       } else {
         const errorData = await response.json();
@@ -40,13 +40,12 @@ document.getElementById('close-modal').addEventListener('click', () => {
   closeModal();
 });
 
-function showModal(message) {
-  document.getElementById('modal-message').textContent = message;
-  document.getElementById('modal').style.display = 'block';
+function showModal() {
+  document.querySelector('').style.display = 'block';
 }
 
 function closeModal() {
-  document.getElementById('modal').style.display = 'none';
+  document.querySelector('').style.display = 'block';
 }
 
 function showErrorNotification(message) {

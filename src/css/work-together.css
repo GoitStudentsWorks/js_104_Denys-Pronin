@@ -55,6 +55,7 @@ body.dark {
   margin-bottom: 32px;
 }
 .work-together-address-wrap {
+  margin-bottom: 60px;
 }
 .work-together-address {
   display: flex;
@@ -62,13 +63,17 @@ body.dark {
   gap: 16px;
 }
 .work-together-address-item {
+  display: flex;
+  align-items: center;
 }
 
-.work-together-address-item:last-child {
+/* .work-together-address-item:last-child {
   margin-bottom: 40px;
-}
+} */
 .address-icon {
-  fill: var(--accent-color);
+  stroke: var(--accent-color);
+  fill: none;
+  margin-right: 16px;
 }
 .work-together-address-link {
   color: var(--main-text-color);
@@ -77,6 +82,7 @@ body.dark {
   font-weight: 300;
   line-height: 24px; /* 150% */
   letter-spacing: 0.5px;
+  text-decoration: none;
 }
 .work-together-address-link:hover {
   color: var(--accent-color);
