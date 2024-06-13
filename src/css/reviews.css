@@ -1,6 +1,6 @@
 
-.reviews{
-    height: auto;
+.swiper{
+width: 320px;    
 }
 .title-reviews {
     text-align: center;
@@ -8,11 +8,14 @@
 }
 
 .swiper-item {
-    width: 320px;
-    height: auto;
+    display: inline-block;
+    width: 256px;
+    height: 368px;
     background-color:  #E4E5E6;
     padding: 32px;
+    margin-bottom: 24px;
 }
+
 .text-review {
 font-family: Poppins;
 font-size: 16px;
@@ -27,7 +30,6 @@ text-align: left;
     display: flex;
     align-items: center; 
     gap: 16px;
-    width: 256px;
     height: 40px;
 }
 .reviewer-foto {
@@ -45,42 +47,26 @@ letter-spacing: 0.5px;
 text-align: left;
 
 }
+.slider-navigator{
+    display: flex;
+    justify-content: right;
+    gap: 16px;
+}
+.s-button-next, .s-button-prev {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: black, 1px, solid;
+    border-radius: 8px;
+}
+.icon{
+    fill: black;
+}
 
-.reviews > .swiper-button-next::after, 
-.reviews > .swiper-button-prev::after {
-            content: "";
-          }
 
-          .swiper-button-next,
-          .swiper-button-prev {
-            background-color: white;
-            background-position: center;
-            background-size: 40px;
-            background-repeat: no-repeat;
-            padding: 8px 16px;
-            border-radius: 100%;
-            border: 2px solid black;
-            color: red;
-          }
 
-          .swiper-button-prev {
-            background-image: url("/src/arrow-narrow-rightarrow.svg");
-            background-position: center;
-          }
-
-          .swiper-button-next {
-            background-image: url("/src/arrow-narrow-rightarrow.svg");
-            background-position: center;
-          }
-
-          .swiper-button-next::after,
-          .swiper-button-prev::after {
-            content: "";
-          }
-
-          .swiper-pagination-bullet{
-            width: 40px;
-            height: 40px;
-            background-color: red;
-          }
 
