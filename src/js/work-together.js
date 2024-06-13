@@ -50,7 +50,7 @@ document
     }
   });
 
-document.querySelector('#close-modal').addEventListener('click', () => {
+document.querySelector('.modal-close').addEventListener('click', () => {
   closeModal();
 });
 
