@@ -2,12 +2,13 @@ document
   .querySelector('.work-together-form')
   .addEventListener('submit', async event => {
     event.preventDefault();
-    const email = document.querySelector('.work-together-email').value;
-    const message = document.querySelector('.work-together-comment').value;
+
+    const emailInput = document.querySelector('.work-together-email');
+    const commentInput = document.querySelector('.work-together-comment');
 
     const requestData = {
-      email: email,
-      message: message,
+      email: emailInput.value,
+      comment: commentInput.value,
     };
 
     try {
@@ -17,6 +18,7 @@ document
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
+            accept: 'application/json',
           },
           body: JSON.stringify(requestData),
         }
@@ -36,19 +38,22 @@ document
     }
   });
 
-document.getElementById('close-modal').addEventListener('click', () => {
+document.querySelector('#close-modal').addEventListener('click', () => {
   closeModal();
 });
 
-function showModal() {
-  document.querySelector('').style.display = 'block';
+function showModal(message) {
+  const modalMessage = document.querySelector('#modal-message');
+  modalMessage.textContent = message;
+  document.querySelector('#modal').style.display = 'block';
 }
 
 function closeModal() {
-  document.querySelector('').style.display = 'block';
+  document.querySelector('#modal').style.display = 'none';
 }
 
 function showErrorNotification(message) {
-  document.getElementById('error-message').textContent = message;
-  document.getElementById('error-notification').style.display = 'block';
+  const errorMessage = document.querySelector('#error-message');
+  errorMessage.textContent = message;
+  document.querySelector('#error-notification').style.display = 'block';
 }
