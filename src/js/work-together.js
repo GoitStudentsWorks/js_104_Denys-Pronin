@@ -1,3 +1,6 @@
+import axios from 'axios';
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
 document
   .querySelector('.work-together-form')
   .addEventListener('submit', async event => {
@@ -12,29 +15,38 @@ document
     };
 
     try {
-      const response = await fetch(
+      const response = await axios.post(
         'https://portfolio-js.b.goit.study/api/requests',
+        requestData,
         {
-          method: 'POST',
           headers: {
             'Content-Type': 'application/json',
-            accept: 'application/json',
+            Accept: 'application/json',
           },
-          body: JSON.stringify(requestData),
         }
       );
 
-      if (response.ok) {
+      if (response.status === 200) {
         showModal();
         document.querySelector('.work-together-form').reset();
       } else {
-        const errorData = await response.json();
-        showErrorNotification(`Помилка: ${errorData.message}`);
+        iziToast.error({
+          title: 'Error',
+          message: `Помилка: ${response.data.message}`,
+        });
       }
     } catch (error) {
-      showErrorNotification(
-        'Виникла помилка при відправці запиту. Спробуйте ще раз.'
-      );
+      if (error.response) {
+        iziToast.error({
+          title: 'Error',
+          message: `Помилка: ${error.response.data.message}`,
+        });
+      } else {
+        iziToast.error({
+          title: 'Error',
+          message: 'Виникла помилка при відправці запиту. Спробуйте ще раз.',
+        });
+      }
     }
   });
 
@@ -42,18 +54,10 @@ document.querySelector('#close-modal').addEventListener('click', () => {
   closeModal();
 });
 
-function showModal(message) {
-  const modalMessage = document.querySelector('#modal-message');
-  modalMessage.textContent = message;
-  document.querySelector('#modal').style.display = 'block';
+function showModal() {
+  document.querySelector('.backdrop').classList.add('is-open');
 }
 
 function closeModal() {
-  document.querySelector('#modal').style.display = 'none';
-}
-
-function showErrorNotification(message) {
-  const errorMessage = document.querySelector('#error-message');
-  errorMessage.textContent = message;
-  document.querySelector('#error-notification').style.display = 'block';
+  document.querySelector('.backdrop').classList.remove('is-open');
 }

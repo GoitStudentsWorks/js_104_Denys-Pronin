@@ -27,6 +27,10 @@ body.dark {
 
   --accent-extra-color: #204136;
 }
+.desktop-wrapper {
+  display: flex;
+  flex-direction: column;
+}
 .title {
   font-family: Impact;
   font-size: 52px;
@@ -40,7 +44,8 @@ body.dark {
   color: var(--accent-color);
 }
 .background-image {
-  background-image: url(../image/decor-bg-3.png);
+  background-image: url(../img/decor-bg-3.png);
+  color: #009156;
   width: 100%;
   background-size: cover;
 }
@@ -172,25 +177,25 @@ body.dark {
   .title {
     margin-bottom: 80px;
   }
-}
-.work-together-description {
-  margin-bottom: 120px;
-}
-.work-together-address {
-  flex-direction: column;
-}
-.desktop-wrapper {
-  display: flex;
-  flex-direction: row;
-  gap: 136px;
-}
-.desktop-wrapper-contacts {
-  display: flex;
-  flex-direction: column;
-}
-.work-together-email {
+
+  .work-together-description {
+    margin-bottom: 120px;
+  }
+  .work-together-address {
+    flex-direction: column;
+  }
+  .desktop-wrapper {
+    flex-direction: row;
+    gap: 136px;
+  }
+  .desktop-wrapper-contacts {
+    display: flex;
+    flex-direction: column;
+  }
+  /* .work-together-email {
   width: 592px;
 }
 .work-together-comment {
   width: 592px;
+} */
 }
