@@ -1,0 +1,53 @@
+.faq {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+  padding: 80px 0;
+  color: var(--main-text-color);
+}
+.faq-title {
+  font-family: Impact;
+  font-size: 52px;
+  line-height: 64px;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+.faq-title-color {
+  color: var(--accent-color);
+}
+.faq-list {
+  font-family: Poppins;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+.faq-list-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+  padding: 28px;
+  border-radius: 16px;
+}
+.faq-row {
+  cursor: pointer;
+  display: flex;
+  column-gap: 16px;
+}
+.faq-svg {
+  flex-shrink: 0;
+  align-self: flex-start;
+  justify-self: flex-end;
+  background-color: red;
+}
+.faq-sub-text {
+  display: none;
+  max-height: 0;
+  transition: max-height 0.6 ease;
+}
+.faq-sub-text.faq-sub-text-active {
+  display: block;
+  max-height: fit-content;
+  background: rgba(0, 176, 104, 0.2);
+}
