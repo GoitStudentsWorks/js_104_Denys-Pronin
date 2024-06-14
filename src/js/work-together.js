@@ -26,7 +26,7 @@ document
         }
       );
 
-      if (response.status === 200) {
+      if (response.status === 201) {
         showModal();
         document.querySelector('.work-together-form').reset();
       } else {

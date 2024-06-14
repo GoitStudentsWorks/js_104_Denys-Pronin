@@ -1,6 +1,7 @@
 .container {
   padding: 0 10px;
   margin: 0 auto;
+  position: relative;
 }
 .section {
   padding: 40px 0;
@@ -211,14 +212,13 @@ body.dark {
   .container::before {
     content: '';
     position: absolute;
-    top: 0;
+    top: -100px;
     right: 0;
     width: 336px;
     height: 260px;
     background-image: url('../img/decor-bg-3.png');
-    /* background-size: cover;  */
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top right;
     z-index: -1;
   }
   .title {
@@ -250,12 +250,14 @@ body.dark {
 @media screen and (min-width: 1280px) {
   .title {
     margin-bottom: 80px;
-    width: 507px;
+    width: 607px;
     height: 248px;
   }
   .container::before {
     width: 526px;
     height: 408px;
+    top: -100px;
+    right: 0;
   }
 
   .work-together-description {
@@ -272,10 +274,4 @@ body.dark {
     display: flex;
     flex-direction: column;
   }
-  /* .work-together-email {
-  width: 592px;
-}
-.work-together-comment {
-  width: 592px;
-} */
 }
