@@ -52,11 +52,11 @@
 }
 
 .toggle-switch {
-  /* position: relative;
-  display: inline-block;
+  position: relative;
+  /* display: inline-block; */
   width: 48px;
   height: 24px;
-  margin-right: 40px; */
+  margin-right: 40px;
   display: none;
 }
 
@@ -111,58 +111,59 @@ input:checked + .slider:before {
   width: 100vw;
   height: 100vh;
   position: fixed;
-  top: 0;
+  top: 64px;
   left: 0;
-  /* background-color: #fff; */
-  background-image: url();
+  /* background-color: var(--accent-color); */
+  background-image: url('../img/header/decor-mob.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
   overflow: auto;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 98;
 }
 
-.menu-close-btn {
-  width: 32px;
-  height: 32px;
-  background-color: transparent;
-  /* border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50%; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  margin-left: auto;
-  border: none;
+.mob-menu-nav {
+  z-index: 99;
 }
 
-.mob-close-icon {
-  fill: var(--main-text-color);
-}
-
-.is-open {
+.mob-menu.open {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
 }
 
-.header-mob-menu {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
+.menu-close-btn {
+  display: none;
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+  cursor: pointer;
+  margin-left: auto;
+  border: none;
+  stroke: var(--main-text-color);
 }
 
-.toggle-switch-mob {
-  position: relative;
-  display: inline-block;
-  width: 48px;
-  height: 24px;
-  margin-right: 40px;
-  /* display: none; */
+.mob-nav-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  z-index: 99;
+}
+
+.switch-mob {
+  display: flex;
+  justify-content: center;
+  margin: 24px auto 0;
+  z-index: 99;
 }
 
 @media screen and (min-width: 768px) {
