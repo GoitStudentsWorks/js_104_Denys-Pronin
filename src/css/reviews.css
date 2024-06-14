@@ -8,12 +8,12 @@ width: 320px;
 }
 
 .swiper-item.swiper-slide {
-    display: inline-block;
-    width: 256px;
+    
     height: 368px;
     background-color:  #E4E5E6;
     padding: 32px;
     margin-bottom: 24px;
+    border-radius: 16px;
 }
 
 .text-review {
@@ -52,23 +52,35 @@ text-align: left;
     justify-content: right;
     gap: 16px;
 }
+/* =========================================Navigationbuttons======================== */
 .s-button-next, .s-button-prev {
     position: relative;
     width: 40px;
     height: 40px;
     display: flex;
     align-items: center;
+    flex-direction: row-reverse;
     justify-content: center;
     cursor: pointer;
     border: 1px solid #2929294D;
     border-radius: 8px;
 }
-.icon{
-    
-    
+
+/* ===================================Tablet=================================*/
+
+@media screen and (min-width: 768px) {
+ .swiper{
+    width: 704px;
+ }
+ .swiper-item.swiper-slide{   
+   
+    height: auto;  
 }
+  }
 
-
-
-
-
+/* ===================================Desctop=================================*/
+@media screen and (min-width: 1280px) {
+.swiper{
+    width: 1286px;
+ }
+}

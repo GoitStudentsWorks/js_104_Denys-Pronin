@@ -40,9 +40,29 @@ async function init() {
 
 
 init(); 
- const swiper = new Swiper('.swiper', {
-   navigation: {
-     nextEl: '.s-button-next',
-     prevEl: '.s-button-prev',
-   },
- });
+const swiper = new Swiper('.swiper', {
+  navigation: {
+    nextEl: '.s-button-next',
+    prevEl: '.s-button-prev',
+  },
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+    pageUpDown: true,
+    pageUpDown: true,
+  },
+  mousewheel: {
+    sensitivity: 3,
+  },
+
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
+    1280: {
+      slidesPerView: 2,
+      spaceBetween: 32,
+    },
+  },
+});
+
