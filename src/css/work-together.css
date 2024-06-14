@@ -44,8 +44,6 @@ body.dark {
 .title > span {
   color: var(--accent-color);
 }
-.container::before {
-}
 
 .work-together-description {
   color: var(--main-text-color);
@@ -88,14 +86,7 @@ body.dark {
   color: var(--accent-color);
   transition: color 250ms ease-in-out;
 }
-.header-contacts-link {
-}
-.work-together-wrapper {
-}
-.work-together-form-column {
-}
-.work-together-form {
-}
+
 .work-together-email {
   width: 100%;
   margin-bottom: 32px;
