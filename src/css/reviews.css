@@ -1,7 +1,8 @@
 
 .swiper{
-width: 320px;    
+min-width : 320px;
 }
+
 .title-reviews {
     text-align: center;
     margin-bottom: 40px;
@@ -53,6 +54,10 @@ text-align: left;
     justify-content: right;
     gap: 16px;
 }
+
+
+
+
 /* =========================================Navigationbuttons======================== */
 .s-button-next, .s-button-prev {
     position: relative;
@@ -60,11 +65,22 @@ text-align: left;
     height: 40px;
     display: flex;
     align-items: center;
-    flex-direction: row-reverse;
+    /* flex-direction: row-reverse; */
     justify-content: center;
     cursor: pointer;
     border: 1px solid #2929294D;
     border-radius: 8px;
+}
+
+
+.icon {
+   fill: none;
+stroke: black;
+}
+
+.disabled>.icon {
+    fill: none;
+stroke: #2929294D;
 }
 
 /* ===================================Tablet=================================*/
@@ -82,6 +98,6 @@ text-align: left;
 /* ===================================Desctop=================================*/
 @media screen and (min-width: 1280px) {
 .swiper{
-    width: 1286px;
+    width: 1280px;
  }
 }
