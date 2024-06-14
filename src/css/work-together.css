@@ -36,7 +36,7 @@ body.dark {
   font-family: Impact;
   font-size: 52px;
   font-weight: 400;
-  line-height: 64px; /* 123.077% */
+  line-height: 64px;
   letter-spacing: 1.8px;
   text-transform: uppercase;
   margin-bottom: 40px;
@@ -50,7 +50,7 @@ body.dark {
   font-family: Poppins;
   font-size: 18px;
   font-weight: 400;
-  line-height: 28px; /* 155.556% */
+  line-height: 28px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
   margin-bottom: 32px;
@@ -78,7 +78,7 @@ body.dark {
   font-family: Poppins;
   font-size: 16px;
   font-weight: 300;
-  line-height: 24px; /* 150% */
+  line-height: 24px;
   letter-spacing: 0.5px;
   text-decoration: none;
 }
@@ -96,6 +96,24 @@ body.dark {
   padding: 16px;
   outline: none;
   border: none;
+}
+.work-together-email:invalid {
+  color: #e74a3b;
+}
+.email-error-text {
+  color: red;
+  font-size: 14px;
+  margin-top: 8px;
+  display: none;
+}
+.icon-success-filled {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  display: none;
+  width: 16px;
+  height: 16px;
 }
 
 .work-together-comment {

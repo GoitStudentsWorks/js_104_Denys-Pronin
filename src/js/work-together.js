@@ -9,6 +9,15 @@ document
     const emailInput = document.querySelector('.work-together-email');
     const commentInput = document.querySelector('.work-together-comment');
 
+    const isValidEmail = emailInput.checkValidity();
+
+    if (!isValidEmail) {
+      emailInput.classList.add('invalid');
+      return;
+    } else {
+      emailInput.classList.remove('invalid');
+    }
+
     const requestData = {
       email: emailInput.value,
       comment: commentInput.value,
