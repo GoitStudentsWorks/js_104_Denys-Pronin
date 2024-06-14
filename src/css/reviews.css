@@ -65,13 +65,16 @@ text-align: left;
     height: 40px;
     display: flex;
     align-items: center;
-    /* flex-direction: row-reverse; */
     justify-content: center;
     cursor: pointer;
     border: 1px solid #2929294D;
     border-radius: 8px;
 }
 
+
+.s-button-next:hover, .s-button-prev:hover {
+    background-color: #E4E5E6;
+}
 
 .icon {
    fill: none;
@@ -81,6 +84,10 @@ stroke: black;
 .disabled>.icon {
     fill: none;
 stroke: #2929294D;
+}
+.disabled {
+    pointer-events: none;
+    border-color: #2929291A;
 }
 
 /* ===================================Tablet=================================*/
