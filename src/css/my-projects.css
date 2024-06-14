@@ -1,61 +1,174 @@
-.projects-title{
-text-align: center; 
-font-family: Impact;
-font-weight: 400;
-letter-spacing: 1.8px;
-font-size: 52px;
-line-height: 64px;
+.projects-title {
+    text-align: center; 
+    font-family: Impact;
+    font-weight: 400;
+    letter-spacing: 1.8px;
+    font-size: 52px;
+    line-height: 64px;
+    padding-bottom: 40px;
 }
 
-.stack-teh{
-font-family: Poppins;
-font-size: 16px;
-font-weight: 300;
-line-height: 24px;
-letter-spacing: 0.5px;
-text-align: left;
-padding-bottom: 20px;
-
-
+.projects-title span {
+    color: var(--accent-color);
 }
 
-.name-project{
-font-family: Poppins;
-font-size: 32px;
-font-weight: 500;
-line-height: 40px;
-letter-spacing: 0.5px;
-text-align: left;
-text-transform: uppercase;
+.card ul{
+    margin-bottom: 40px;
+    list-style-type: none;
 }
 
+.image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.image-wrapper img {
+    max-width: 100%;
+    height: auto;
+    width: 320px;
+    height: 184px;
+    gap: 0px;
+    border-radius: 16px;
+}
 
-.projects-button{
+.text-container {
+    width: 320px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.stack-teh {
+    padding-top: 12px;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    text-align: left;
+    padding-bottom: 16px;
+}
+
+.name-project {
+    font-family: Poppins;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 40px;
+    letter-spacing: 0.5px;
+    text-align: left;
+    text-transform: uppercase;
+    padding-bottom: 16px;
+}
+
+.form-container {
+    display: flex;
+    justify-content: flex-end; /* Вирівнювання кнопки праворуч */
+}
+
+.projects-button {
+    margin-top: 12px;
     background-color: var(--extra-bg-color);
     width: 125px;
     height: 48px;
     padding: 12px 24px 12px 24px;
     gap: 12px;
     border-radius: 8px;
-    border-color: var(--extra-bg-color);
-    box-shadow: none;
-
+    border: var(--extra-bg-color);
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
 }
 
-@media screen and (min-width: 768px){  
-.projects-title{
-font-size: 108px;
-line-height: 124px;}
-
+.load-more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 24px;
+    font-family: 'Poppins';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 2px;
+    text-decoration-color: #007A50; 
+    border: none;
+    cursor: pointer;
+    margin: 20px auto;
 }
 
-@media screen and (min-width: 1280px){
-    
+@media screen and (min-width: 768px){ 
+      .text-button{
+        box-sizing: 760px;
+        display: flex;
+        align-items: center; 
+        justify-content: space-between; 
+    }
+
+    .name-project {
+        padding-bottom: 0px;
+        margin-right: auto; 
+        font-size: 36px;
+    }
+
+    .form-container {
+        margin-left: auto; 
+    }
+   
+
+    .projects-title {
+        padding-bottom: 60px;
+        font-size: 108px;
+        line-height: 124px;
+    }
+    .projects-button {
+    margin-top: 0px}
+
+
+    .card ul{
+    margin-bottom: 60px;
+}
+    .image-wrapper img {
+        width: 704px;
+        height: 404px;
+        border-radius: 24px;
+    }
+    .text-container {
+    width: 704px;
+}
+
+.stack-teh {
+    padding-bottom: 20px;
+}
+}
+
+@media screen and (min-width: 1280px) {
+    .projects-title {
+        padding-bottom: 80px;
+    }
+    .card ul{
+    margin-bottom: 80px;
+}
+
+
+.text-button{
+        box-sizing: 1008px;
+    }
+    .image-wrapper img {
+        min-width: 1008px;
+        height: 578px;  
+    }
+    .text-container {
+    width: 1008px;
+}
 }
 
 
 
-.projects-title span{
-    color: var(--accent-color)
-}
