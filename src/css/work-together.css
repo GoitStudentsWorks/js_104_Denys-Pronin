@@ -104,6 +104,7 @@ body.dark {
   height: 48px;
   padding: 16px;
   outline: none;
+  border: none;
 }
 
 .work-together-comment {
@@ -114,6 +115,7 @@ body.dark {
   height: 96px;
   padding: 16px;
   outline: none;
+  border: none;
   resize: none;
 }
 .work-together-email::placeholder,
@@ -124,6 +126,8 @@ body.dark {
   font-weight: 300;
   line-height: 24px; /* 150% */
   letter-spacing: 0.5px;
+  outline: none;
+  border: none;
 }
 .work-together-button {
   width: 100%;
@@ -140,6 +144,9 @@ body.dark {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  outline: none;
+  border: none;
 }
 .work-together-button:hover {
   background-color: #009156;
@@ -199,10 +206,18 @@ body.dark {
 
 .modal-close {
   position: absolute;
-  top: 10%;
-  right: 5%;
+  right: 20px;
+  top: 20px;
+  width: 24px;
+  height: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
 }
-
+.icon-close-btn {
+  stroke: var(--main-text-color);
+}
 /* Adaptive Tablet */
 @media screen and (min-width: 768px) {
   .container {
@@ -233,6 +248,9 @@ body.dark {
   }
   .work-together-address {
     flex-direction: row;
+  }
+  .work-together-comment {
+    height: 128px;
   }
   .work-together-button {
     position: absolute;
