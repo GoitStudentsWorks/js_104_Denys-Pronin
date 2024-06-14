@@ -8,12 +8,14 @@ width: 320px;
 }
 
 .swiper-item.swiper-slide {
-    
     height: 368px;
     background-color:  #E4E5E6;
     padding: 32px;
-    margin-bottom: 24px;
     border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 24px;
 }
 
 .text-review {
@@ -23,8 +25,7 @@ font-weight: 300;
 line-height: 24px;
 letter-spacing: 0.5px;
 text-align: left;
-
-    margin-bottom: 24px;
+margin-bottom: 24px;
 }
 .reviewer {
     display: flex;
