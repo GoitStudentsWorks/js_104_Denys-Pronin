@@ -22,29 +22,48 @@ const faqListItems = document.querySelectorAll('.faq-list-item');
 faqList.addEventListener('click', function (event) {
   const faqRow = event.target.closest('.faq-row');
   if (faqRow) {
-    faqRow.parentElement.classList.toggle('faq-list-item-active');
+    const faqListItem = faqRow.parentElement;
 
+    faqListItem.classList.toggle('faq-list-item-active');
     faqListItems.forEach(elem => {
       if (
         elem.classList.contains('faq-list-item-active') &&
-        elem != faqRow.parentElement
+        elem != faqListItem
       ) {
         elem.classList.remove('faq-list-item-active');
       }
-      // if (
-      //   elem == faqRow.parentElement &&
-      //   faqRow.parentElement.classList.contains('faq-list-item-active')
-      // ) {
-      //   faqRow.parentElement.previousElementSibling.style.borderBottom = 'none';
-      //   console.log('none');
-      // } else if (
-      //   elem == faqRow.parentElement &&
-      //   !faqRow.parentElement.classList.contains('faq-list-item-active')
-      // ) {
-      //   faqRow.parentElement.previousElementSibling.style.borderBottom =
-      //     '1px solid #ff0000';
-      //   console.log('else');
-      // }
+      if (faqListItem.previousElementSibling) {
+        if (
+          elem == faqListItem &&
+          faqListItem.classList.contains('faq-list-item-active')
+        ) {
+          faqListItem.previousElementSibling.style.borderBottom = 'none';
+          console.log('none');
+        } else if (
+          elem == faqListItem &&
+          !faqListItem.classList.contains('faq-list-item-active')
+        ) {
+          console.log('else if');
+          faqListItem.previousElementSibling.style.borderBottom =
+            '1px solid #ff0000';
+        }
+      }
     });
   }
 });
+
+// if (prevListItem && prevListItem.classList.contains('faq-list-item')) {
+//   if (faqRow === faqListItem.firstElementChild && isListItemActive) {
+//     prevListItem.style.borderBottom = 'none';
+//     console.log('First element clicked, borderBottom set to none');
+//   } else if (faqRow === faqListItem.firstElementChild && !isListItemActive) {
+//     prevListItem.style.borderBottom = '1px solid #ff0000';
+//     console.log('First element clicked, borderBottom set to red');
+//   } else if (
+//     faqRow !== faqListItem.firstElementChild &&
+//     prevListItem.style.borderBottom === 'none'
+//   ) {
+//     prevListItem.style.borderBottom = '1px solid #ff0000';
+//     console.log('Previous element, borderBottom set to red');
+//   }
+// }
