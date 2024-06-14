@@ -7,7 +7,7 @@ width: 320px;
     margin-bottom: 40px;
 }
 
-.swiper-item {
+.swiper-item.swiper-slide {
     display: inline-block;
     width: 256px;
     height: 368px;
@@ -60,12 +60,14 @@ text-align: left;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    border: black, 1px, solid;
+    border: 1px solid #2929294D;
     border-radius: 8px;
 }
 .icon{
-    fill: black;
+    
+    
 }
+
 
 
 
