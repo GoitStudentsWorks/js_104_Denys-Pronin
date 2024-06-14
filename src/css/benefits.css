@@ -1,52 +1,53 @@
 .benefits {
-  padding: 0px 32px;
-  width: 1280px;
-  height: 676px;
-  display: flex;
-  flex-wrap: wrap;
+  width: 360px;
   justify-content: center;
 }
 
 .benefits-container {
-  width: 1216px;
-  display: flex;
-  text-align: inherit;
+  display: block;
+  width: 320px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .accent {
   font-family: 'Impact', sans-serif;
   font-weight: 400;
-  font-size: 108px;
-  line-height: 115%;
-  letter-spacing: 0.02em;
+  font-size: 52px;
+  line-height: 123%;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #00b068;
 }
 .title {
   font-family: 'Impact', sans-serif;
   font-weight: 400;
-  font-size: 108px;
-  line-height: 115%;
-  letter-spacing: 0.02em;
+  font-size: 52px;
+  line-height: 123%;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #292929;
+  margin-bottom: 40px;
 }
 
 .benefits-list-item {
   font-weight: 400;
-  font-size: 20px;
-  line-height: 160%;
+  font-size: 18px;
+  line-height: 156%;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #292929;
-  margin-bottom: 16px;
+  margin-bottom: 32px;
 }
+
 .item-text {
+  font-weight: 300;
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 0.03em;
   text-transform: none;
   color: #292929;
+  margin-top: 16px;
 }
 .icon {
   fill: none;
