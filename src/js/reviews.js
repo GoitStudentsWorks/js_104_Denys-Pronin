@@ -48,7 +48,7 @@ async function init() {
       },
 
       breakpoints: {
-        320: {
+        300: {
           slidesPerView: 1,
           spaceBetween: 0,
         },

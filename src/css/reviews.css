@@ -1,6 +1,6 @@
 
 .swiper{
-min-width : 300px;
+width : 300px !important; 
 }
 
 .title-reviews {
@@ -9,7 +9,7 @@ min-width : 300px;
 }
 
 .swiper-item.swiper-slide {
-    height: 368px;
+    height: 400px;
     background-color:  #E4E5E6;
     padding: 32px;
     border-radius: 16px;
@@ -91,16 +91,15 @@ stroke: #2929294D;
 }
 /* ===================================Mobile=================================*/
 .swiper {
-    width: 320px;
+    width: 320px !important;
 }
 /* ===================================Tablet=================================*/
 
 @media screen and (min-width: 768px) {
- .swiper{
-    width: 704px;
+ .swiper {
+    width: 704px !important;
  }
  .swiper-item.swiper-slide{   
-   
     height: auto;  
 }
   }
@@ -108,6 +107,6 @@ stroke: #2929294D;
 /* ===================================Desctop=================================*/
 @media screen and (min-width: 1280px) {
 .swiper{
-    width: 1216px;
+    width: 1216px !important;
  }
 }
