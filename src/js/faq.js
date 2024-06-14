@@ -17,18 +17,34 @@ import 'accordion-js/dist/accordion.min.css';
 // faqList.addEventListener('click', event => {});
 
 const faqList = document.querySelector('.faq-list');
-const fqaSubTextElements = document.querySelectorAll('.faq-sub-text');
+const faqListItems = document.querySelectorAll('.faq-list-item');
 
 faqList.addEventListener('click', function (event) {
   const faqRow = event.target.closest('.faq-row');
   if (faqRow) {
-    const subText = faqRow.nextElementSibling;
-    subText.classList.toggle('faq-sub-text-active');
+    faqRow.parentElement.classList.toggle('faq-list-item-active');
 
-    fqaSubTextElements.forEach(elem => {
-      if (elem.classList.contains('faq-sub-text-active') && elem != subText) {
-        elem.classList.remove('faq-sub-text-active');
+    faqListItems.forEach(elem => {
+      if (
+        elem.classList.contains('faq-list-item-active') &&
+        elem != faqRow.parentElement
+      ) {
+        elem.classList.remove('faq-list-item-active');
       }
+      // if (
+      //   elem == faqRow.parentElement &&
+      //   faqRow.parentElement.classList.contains('faq-list-item-active')
+      // ) {
+      //   faqRow.parentElement.previousElementSibling.style.borderBottom = 'none';
+      //   console.log('none');
+      // } else if (
+      //   elem == faqRow.parentElement &&
+      //   !faqRow.parentElement.classList.contains('faq-list-item-active')
+      // ) {
+      //   faqRow.parentElement.previousElementSibling.style.borderBottom =
+      //     '1px solid #ff0000';
+      //   console.log('else');
+      // }
     });
   }
 });

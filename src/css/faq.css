@@ -20,34 +20,51 @@
   font-size: 18px;
   line-height: 28px;
   letter-spacing: 0.5px;
-  text-transform: uppercase;
 }
 .faq-list-item {
   position: relative;
   display: flex;
   flex-direction: column;
-  row-gap: 24px;
-  padding: 28px;
+  padding: 28px 24px;
+  border-radius: 0px;
+  border-bottom: 1px solid #ccc;
+}
+.faq-list-item-active {
   border-radius: 16px;
+  border-bottom: none;
+  background: rgba(0, 176, 104, 0.2);
 }
 .faq-row {
   cursor: pointer;
   display: flex;
   column-gap: 16px;
+  justify-content: space-between;
+}
+.faq-list-item-active .faq-row {
+}
+.faq-text {
+  text-transform: uppercase;
 }
 .faq-svg {
   flex-shrink: 0;
-  align-self: flex-start;
-  justify-self: flex-end;
-  background-color: red;
+
+  stroke: #292929;
+  stroke-width: 2;
+  stroke-linecap: round;
+  fill: none;
+  transition: transform 300ms linear;
+}
+.faq-list-item-active .faq-svg {
+  transform: rotate(180deg);
 }
 .faq-sub-text {
-  display: none;
   max-height: 0;
-  transition: max-height 0.6 ease;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 300ms linear;
 }
-.faq-sub-text.faq-sub-text-active {
-  display: block;
-  max-height: fit-content;
-  background: rgba(0, 176, 104, 0.2);
+.faq-list-item-active .faq-sub-text {
+  max-height: 500px;
+  padding-top: 24px;
+  opacity: 1;
 }
