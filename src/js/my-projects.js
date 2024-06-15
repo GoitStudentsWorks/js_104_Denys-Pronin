@@ -20,30 +20,28 @@ document.addEventListener('DOMContentLoaded', function() {
             const projectItem = document.createElement('div');
             projectItem.className = 'project-item';
             projectItem.innerHTML = `
-            <ul class="project-container">
-        <li>
 
-             <div class="image-wrapper">
+
+        <ul class="project-container">
+        <li>
+            <div class="image-wrapper">
                 <img src="${project.image}" alt="${project.name}">
             </div>
             <div class="text-container">
                 <p class="stack-teh">${project.tech}</p>
                 <div class="text-button">
                 <h3 class="name-project">${project.name}</h3>
-                <div class="form-container">
-                    <form action="https://github.com/Denys-Pronin/IT-Hub-Portfolio" method="get">
-                        <button type="submit" class="projects-button">VISIT
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M4.75 19.25L19.25 4.75M19.25 4.75H5.75M19.25 4.75V18.25" stroke="#00B068" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </button>
-                    </form>
+                <div class="link-container">
+                    <a class="link-project" href="https://github.com/Denys-Pronin/IT-Hub-Portfolio">VISIT
+                        <svg stroke="#00B068" width="24" height="24"><use href="../img/symbol-defs.svg#icon-vector"></use></svg>
+                    </a>
                 </div>
                 </div>
             </div>
-            
-             </li>
-    </ul>`;
+        </li>
+    </ul>
+
+`;
             projectsContainer.appendChild(projectItem);
         });
         projectsLoaded += projectsToLoad;
