@@ -61,7 +61,7 @@
 }
 
 .marquee__line_reverse {
-  animation-name: marqueeLine;
+  animation-name: marqueeLineReverse;
 }
 
 .marquee__line > li {
@@ -89,25 +89,6 @@
   background-color: var(--main-text-color);
 }
 
-@keyframes marqueeLine {
-  0% {
-    transform: translateX(0);
-  }
-
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-@keyframes marqueeLineReverse {
-  0% {
-    transform: translateX(-100%);
-  }
-
-  100% {
-    transform: translateX(0);
-  }
-}
 @keyframes marqueeLine {
   0% {
     transform: translateX(0);
