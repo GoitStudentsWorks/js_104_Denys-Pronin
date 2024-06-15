@@ -172,6 +172,10 @@ input:checked + .slider:before {
     display: none;
   }
 
+  .mob-menu {
+    display: none;
+  }
+
   .header-logo {
     font-size: 32px;
     line-height: 100%;
