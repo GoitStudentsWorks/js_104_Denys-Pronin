@@ -12,6 +12,7 @@ const serverError = () => {
     title: 'Error',
     message: 'Sorry, there are problems on the server',
     position: 'topRight',
+    timeout: 3000,
   });
 };
 
@@ -93,6 +94,10 @@ async function init() {
     const markupError = `<li class="swiper-item swiper-slide">
                      <p class="text-review error">Not found</p>`;
     mySwiper.insertAdjacentHTML('beforeend', markupError);
+    nextButton.classList.add('disabled');
+    prevButton.classList.add('disabled');
+    prevButton.setAttribute('disabled', 'true');
+    nextButton.setAttribute('disabled', 'true');
     console.error('Error fetching reviews:', error);
   }
 }

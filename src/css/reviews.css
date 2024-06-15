@@ -1,7 +1,4 @@
 
-.swiper{
-width : 300px !important; 
-}
 
 .title-reviews {
     text-align: center;
@@ -9,7 +6,7 @@ width : 300px !important;
 }
 
 .swiper-item.swiper-slide {
-    height: 400px;
+    height: auto;
     background-color:  #E4E5E6;
     padding: 32px;
     border-radius: 16px;
@@ -94,26 +91,27 @@ stroke: #2929294D;
     pointer-events: none;
     border-color: #2929291A;
 }
+
 /* ===================================Mobile=================================*/
-@media screen and (min-width: 360px){
+/* @media screen and (min-width: 360px){
 .swiper {
-    width: 320px !important;
+    width: 320px;
 }
-}
+} */
 /* ===================================Tablet=================================*/
 
-@media screen and (min-width: 768px) {
- .swiper {
-    width: 704px !important;
- }
- .swiper-item.swiper-slide{   
+/* @media screen and (min-width: 768px) { */
+ /* .swiper {
+    width: 704px;
+ } */
+ /* .swiper-item.swiper-slide{   
     height: auto;  
 }
-  }
+  } */
 
 /* ===================================Desctop=================================*/
-@media screen and (min-width: 1280px) {
+/* @media screen and (min-width: 1280px) {
 .swiper{
-    width: 1216px !important;
+    width: auto;
  }
-}
+} */
