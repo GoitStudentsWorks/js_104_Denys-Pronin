@@ -39,6 +39,9 @@
 }
 
 .ac .ac-trigger {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 16px;
   color: var(--main-text-color);
   font-family: Poppins;
   font-size: 18px;
@@ -47,34 +50,24 @@
   text-transform: uppercase;
   text-align: left;
   width: 100%;
-  padding: 0px 40px 0px 0px;
-  display: block;
   cursor: pointer;
   background-color: transparent;
-  transition: color 0.25s ease;
-  position: relative;
   margin: 0;
   border: 0;
 }
-
-.ac .ac-trigger::after {
-  content: '\027E9';
+.button-svg {
+  flex-shrink: 0;
+  fill: none;
+  background-color: cyan;
+  width: 24px;
+  height: 24px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  color: var(--main-text-color);
-  font-size: 25px;
-  top: 0;
-  right: 0;
-  background-size: contain;
-  transform: rotate(90deg);
 }
-/* .ac .ac-trigger:focus {
-  color: #8a8a8a;
-} */
+.button-img {
+  transition: transform 400ms ease;
+}
 .ac .ac-panel {
   overflow: hidden;
   transition-property: height, visibility;
@@ -98,8 +91,11 @@
   visibility: visible;
 }
 
-.ac.is-active > .ac-header .ac-trigger::after {
-  transform: rotate(270deg);
+.ac.is-active > .ac-header .button-svg {
+  transform: rotate(180deg);
+}
+.ac.is-active > .ac-header .button-img {
+  transform: rotate(180deg);
 }
 .no-border-bottom {
   border-bottom: none;
@@ -123,6 +119,7 @@
   .faq .container {
     flex-direction: row;
     max-width: 1158px;
+    column-gap: 85px;
   }
   .faq-title {
     padding-bottom: 648px;
@@ -130,5 +127,19 @@
   }
   .faq-list {
     align-self: flex-end;
+  }
+  .faq .container {
+    background: url('../img/faq/decorBg1x.png') no-repeat;
+    background-position: left bottom 124px;
+    background-size: 526px 408px;
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .faq .container {
+      background: url('../img/faq/decorBg2x.png') no-repeat;
+      background-position: left bottom 124px;
+      background-size: 526px 408px;
+    }
   }
 }
