@@ -62,7 +62,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  stroke: black;
+  stroke: var(--main-text-color);
 }
 .button-img {
   transition: transform 400ms ease;
