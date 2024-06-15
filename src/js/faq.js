@@ -1,10 +1,11 @@
 import Accordion from 'accordion-js';
-// import 'accordion-js/dist/accordion.min.css';
 
 const according = document.querySelector('.faq-list');
 const listItemAc = document.querySelectorAll('.ac');
 
 new Accordion(according, {
+  openOnInit: [0],
+  collapse: true,
   duration: 400,
   showMultiple: false,
   beforeOpen: function (currentElement) {
