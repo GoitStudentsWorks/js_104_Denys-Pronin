@@ -3,10 +3,11 @@
 } */
 
 .header-box {
-  /* padding: 32px 0; */
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 100;
 }
 
 .header-navigation {
