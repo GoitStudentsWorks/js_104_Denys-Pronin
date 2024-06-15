@@ -1,10 +1,19 @@
 import axios from 'axios';
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
-
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
 const mySwiper = document.querySelector('.mySwiper');
 const nextButton = document.querySelector('.s-button-next');
 const prevButton = document.querySelector('.s-button-prev');
+
+const serverError = () => {
+  iziToast.error({
+    title: 'Error',
+    message: 'Sorry, there are problems on the server',
+    position: 'topRight',
+  });
+};
 
 async function getReviews() {
   return (await axios.get(`https://portfolio-js.b.goit.study/api/reviews`))
@@ -27,6 +36,7 @@ async function init() {
           </li>`;
         })
         .join('');
+      mySwiper.innerHTML = '';
       mySwiper.insertAdjacentHTML('beforeend', markup);
     }
 
@@ -58,32 +68,33 @@ async function init() {
         },
       },
     });
-    
-function updateButtons() {
-  if (swiper.isEnd) {
-    nextButton.classList.add('disabled');
-    nextButton.setAttribute('disabled', 'true');
-  } else {
-    nextButton.classList.remove('disabled');
-    nextButton.removeAttribute('disabled');
-  }
-  if (swiper.isBeginning) {
-    prevButton.classList.add('disabled');
-    prevButton.setAttribute('disabled', 'true');
-  } else {
-    prevButton.classList.remove('disabled');
-    prevButton.removeAttribute('disabled');
-  }
-}
+
+    function updateButtons() {
+      if (swiper.isEnd) {
+        nextButton.classList.add('disabled');
+        nextButton.setAttribute('disabled', 'true');
+      } else {
+        nextButton.classList.remove('disabled');
+        nextButton.removeAttribute('disabled');
+      }
+      if (swiper.isBeginning) {
+        prevButton.classList.add('disabled');
+        prevButton.setAttribute('disabled', 'true');
+      } else {
+        prevButton.classList.remove('disabled');
+        prevButton.removeAttribute('disabled');
+      }
+    }
     updateButtons();
 
     swiper.on('slideChange', updateButtons);
-    
   } catch (error) {
+    serverError();
+    const markupError = `<li class="swiper-item swiper-slide">
+                     <p class="text-review error">Not found</p>`;
+    mySwiper.insertAdjacentHTML('beforeend', markupError);
     console.error('Error fetching reviews:', error);
   }
 }
 
 init();
-
-
