@@ -13,7 +13,7 @@ document
 
     if (!isValidEmail) {
       emailInput.classList.add('invalid');
-      return;
+      event.preventDefault();
     } else {
       emailInput.classList.remove('invalid');
     }
