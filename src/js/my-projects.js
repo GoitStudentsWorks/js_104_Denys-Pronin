@@ -17,13 +17,10 @@ document.addEventListener('DOMContentLoaded', function() {
     function loadProjects() {
         const nextProjects = projects.slice(projectsLoaded, projectsLoaded + projectsToLoad);
         nextProjects.forEach(project => {
-            const projectItem = document.createElement('div');
-            projectItem.className = 'project-item';
+            const projectItem = document.createElement('li');
+            
             projectItem.innerHTML = `
 
-
-        <ul class="project-container">
-        <li>
             <div class="image-wrapper">
                 <img src="${project.image}" alt="${project.name}">
             </div>
@@ -32,14 +29,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="text-button">
                 <h3 class="name-project">${project.name}</h3>
                 <div class="link-container">
-                    <a class="link-project" href="https://github.com/Denys-Pronin/IT-Hub-Portfolio">VISIT
+                    <a  target="_blank" class="link-project" href="https://github.com/Denys-Pronin/IT-Hub-Portfolio">VISIT
                         <svg stroke="#00B068" width="24" height="24"><use href="../img/symbol-defs.svg#icon-vector"></use></svg>
                     </a>
                 </div>
                 </div>
             </div>
-        </li>
-    </ul>
+       
 
 `;
             projectsContainer.appendChild(projectItem);
