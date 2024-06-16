@@ -8,7 +8,6 @@
   line-height: 156%;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #292929;
   margin-bottom: 32px;
 }
 
@@ -48,7 +47,7 @@
   .background-image {
     width: 526px;
     height: 408px;
-    background-image: url('../img/benefits/png/decor\ bg\ 3@2x.png');
+    background-image: url('../img/benefits/png/decor_bg_3@2x.png');
     background-size: cover;
     background-position: center;
     position: absolute;
@@ -77,17 +76,15 @@
 }
 
 .item-text {
-  font-weight: 300;
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 0.03em;
   text-transform: none;
-  color: #292929;
   margin-top: 16px;
 }
-.icon {
+.benefit-icon {
   fill: none;
-  stroke: #00b068;
+  stroke: var(--accent-color);
 }
 .item-icon {
   display: flex;
