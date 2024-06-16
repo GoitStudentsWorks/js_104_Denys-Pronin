@@ -1,47 +1,15 @@
-.container {
-  padding: 0 10px;
-  margin: 0 auto;
+.work-together-container {
   position: relative;
 }
-/* .section {
-  padding: 40px 0;
-} */
 
-.accent {
-  --accent-color: #00b068;
-}
-body {
-  --main-bg-color: #f0f0f0;
-  --extra-bg-color: #e4e5e6;
-
-  --main-text-color: #292929;
-  --accent-color: #00b068;
-
-  --accent-extra-color: #bcdfd1;
-}
-body.dark {
-  --main-bg-color: #1e2023;
-  --extra-bg-color: #2a2d32;
-
-  --main-text-color: #f0f0f0;
-  --accent-color: #14c57c;
-
-  --accent-extra-color: #204136;
-}
 .desktop-wrapper {
   display: flex;
   flex-direction: column;
 }
-.title {
-  font-family: Impact;
-  font-size: 52px;
-  font-weight: 400;
-  line-height: 64px;
-  letter-spacing: 1.8px;
-  text-transform: uppercase;
+.work-together-title {
   margin-bottom: 40px;
 }
-.title > span {
+.work-together-title > span {
   color: var(--accent-color);
 }
 
@@ -96,10 +64,9 @@ body.dark {
   padding: 16px;
   outline: none;
   border: none;
-  
 }
 .invalid {
-  color: #e74a3b; 
+  color: #e74a3b;
 }
 .email-error-text {
   color: #e74a3b;
@@ -234,10 +201,6 @@ body.dark {
 }
 /* Adaptive Tablet */
 @media screen and (min-width: 768px) {
-  .container {
-    padding: 0 32px;
-    margin: 0 auto;
-  }
   .container::before {
     content: '';
     position: absolute;
@@ -250,16 +213,11 @@ body.dark {
     background-position: top right;
     z-index: -1;
   }
-  .title {
-    font-size: 108px;
-    line-height: 124px;
-    
-  }
 
-  #work-together{
-margin-bottom: 60px;
+  #work-together {
+    margin-bottom: 60px;
   }
-  .desktop-wrapper-contacts{
+  .desktop-wrapper-contacts {
     margin-bottom: 60px;
   }
   .work-together-description {
@@ -274,7 +232,6 @@ margin-bottom: 60px;
     height: 128px;
   }
   .work-together-button {
-    
     width: 173px;
     height: 48px;
     padding: 0;
@@ -284,13 +241,13 @@ margin-bottom: 60px;
     min-height: 280px;
     padding: 64px;
   }
-  .work-together-address-wrap{
+  .work-together-address-wrap {
     margin-bottom: 0;
   }
 }
 /* Adaptive Desktop */
 @media screen and (min-width: 1280px) {
-  .title {
+  .work-together-title {
     margin-bottom: 80px;
     width: 607px;
     height: 248px;
@@ -299,7 +256,7 @@ margin-bottom: 60px;
     width: 526px;
     height: 408px;
     top: -144px;
-   background-image: url('../img/decor-bg-4\ .png');
+    background-image: url('../img/decor-bg-4\ .png');
   }
 
   .work-together-description {
@@ -308,7 +265,7 @@ margin-bottom: 60px;
   .work-together-address {
     flex-direction: column;
   }
-  
+
   .desktop-wrapper {
     flex-direction: row;
     justify-content: space-between;
@@ -319,6 +276,5 @@ margin-bottom: 60px;
   }
   .work-together-form-column {
     width: 592px;
-    
   }
 }
