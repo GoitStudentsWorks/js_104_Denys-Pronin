@@ -46,19 +46,21 @@
       <div class="work-together-wrapper">
         <div class="work-together-form-column">
           <form action="" class="work-together-form">
-            <input
-              class="work-together-email"
-              required
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Your email*"
-              pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
-            />
-            <p class="email-error-text">Invalid email, try again</p>
-            <svg class="icon-success-filled" width="16" height="16">
-              <use href="./img/symbol-defs.svg#icon-success-filled"></use>
-            </svg>
+            <div class="input-wrapper">
+              <input
+                class="work-together-email"
+                required
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Your email*"
+                pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+              />
+              <svg class="icon-success-filled" width="16" height="16">
+                <use href="./img/symbol-defs.svg#icon-success-filled"></use>
+              </svg>
+              <p class="email-error-text">Invalid email, try again</p>
+            </div>
             <textarea
               class="work-together-comment"
               name="textarea"

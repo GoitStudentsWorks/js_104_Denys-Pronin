@@ -1,26 +1,45 @@
 import axios from 'axios';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
-document
-  .querySelector('.work-together-form')
-  .addEventListener('input', async event => {
-    event.preventDefault();
-    const emailInput = document.querySelector('.work-together-email');
-    const isValidEmail = emailInput.checkValidity();
 
-    if (!isValidEmail) {
-      emailInput.classList.add('invalid');
-      event.preventDefault();
-    } else {
-      emailInput.classList.remove('invalid');
-    }
-  });
-document.addEventListener('submit', async event => {
+const emailInput = document.querySelector('.work-together-email');
+const emailErrorText = document.querySelector('.email-error-text');
+const iconSuccess = document.querySelector('.icon-success-filled');
+const form = document.querySelector('.work-together-form');
+const modal = document.querySelector('.backdrop');
+const modalCloseButton = document.querySelector('.modal-close');
+
+form.addEventListener('input', () => {
+  const isValidEmail = emailInput.checkValidity();
+
+  if (isValidEmail) {
+    emailInput.classList.remove('invalid');
+    iconSuccess.style.display = 'block';
+    emailErrorText.style.display = 'none';
+  } else {
+    emailInput.classList.add('invalid');
+    iconSuccess.style.display = 'none';
+    emailErrorText.style.display = 'block';
+  }
+});
+
+form.addEventListener('submit', async event => {
   event.preventDefault();
-  const commentInput = document.querySelector('.work-together-comment');
+
+  const emailValue = emailInput.value;
+  const commentValue = document.querySelector('.work-together-comment').value;
+
+  if (!emailValue || !commentValue) {
+    iziToast.error({
+      title: 'Error',
+      message: 'All fields are required.',
+    });
+    return;
+  }
+
   const requestData = {
-    email: emailInput.value,
-    comment: commentInput.value,
+    email: emailValue,
+    comment: commentValue,
   };
 
   try {
@@ -37,36 +56,30 @@ document.addEventListener('submit', async event => {
 
     if (response.status === 201) {
       showModal();
-      document.querySelector('.work-together-form').reset();
+      form.reset();
+      iconSuccess.style.display = 'none';
     } else {
       iziToast.error({
         title: 'Error',
-        message: `Помилка: ${response.data.message}`,
+        message: `Error: ${response.data.message}`,
       });
     }
   } catch (error) {
-    if (error.response) {
-      iziToast.error({
-        title: 'Error',
-        message: `Помилка: ${error.response.data.message}`,
-      });
-    } else {
-      iziToast.error({
-        title: 'Error',
-        message: 'Виникла помилка при відправці запиту. Спробуйте ще раз.',
-      });
-    }
+    iziToast.error({
+      title: 'Error',
+      message: 'There was an error sending the request. Please try again.',
+    });
   }
 });
 
-document.querySelector('.modal-close').addEventListener('click', () => {
+modalCloseButton.addEventListener('click', () => {
   closeModal();
 });
 
 function showModal() {
-  document.querySelector('.backdrop').classList.add('is-open');
+  modal.classList.add('is-open');
 }
 
 function closeModal() {
-  document.querySelector('.backdrop').classList.remove('is-open');
+  modal.classList.remove('is-open');
 }
