@@ -1,0 +1,117 @@
+
+
+.title-reviews {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.swiper-item.swiper-slide {
+    height: auto;
+    background-color:  #E4E5E6;
+    padding: 32px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.text-review {
+font-family: Poppins;
+font-size: 16px;
+font-weight: 300;
+line-height: 24px;
+letter-spacing: 0.5px;
+text-align: left;
+margin-bottom: 24px;
+}
+.reviewer {
+    display: flex;
+    align-items: center; 
+    gap: 16px;
+    height: 40px;
+}
+.reviewer-foto {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.reviewer-name {
+font-family: Poppins;
+font-size: 16px;
+font-weight: 600;
+line-height: 24px;
+letter-spacing: 0.5px;
+text-align: left;
+
+}
+.slider-navigator{
+    display: flex;
+    justify-content: right;
+    gap: 16px;
+}
+
+.text-review.error{
+   font-size: 16px;
+font-weight: 500;
+text-align: center;
+margin: 0;
+}
+
+
+/* =========================================Navigationbuttons======================== */
+.s-button-next, .s-button-prev {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid #2929294D;
+    border-radius: 8px;
+}
+
+
+.s-button-next:hover, .s-button-prev:hover {
+    background-color: #E4E5E6;
+}
+
+.icon {
+   fill: none;
+stroke: black;
+}
+
+.disabled>.icon {
+    fill: none;
+stroke: #2929294D;
+}
+.disabled {
+    pointer-events: none;
+    border-color: #2929291A;
+}
+
+/* ===================================Mobile=================================*/
+/* @media screen and (min-width: 360px){
+.swiper {
+    width: 320px;
+}
+} */
+/* ===================================Tablet=================================*/
+
+/* @media screen and (min-width: 768px) { */
+ /* .swiper {
+    width: 704px;
+ } */
+ /* .swiper-item.swiper-slide{   
+    height: auto;  
+}
+  } */
+
+/* ===================================Desctop=================================*/
+/* @media screen and (min-width: 1280px) {
+.swiper{
+    width: auto;
+ }
+} */
