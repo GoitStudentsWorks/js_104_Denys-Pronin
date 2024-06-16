@@ -2,10 +2,11 @@ body {
   --main-bg-color: #f0f0f0;
   --extra-bg-color: #e4e5e6;
 
-  --main-text-color: rgba(41, 41, 41, 1);
+  --main-text-color: #292929;;
   --accent-color: #00b068;
 
   --accent-extra-color: #bcdfd1;
+  --disabled-btn: #CCCCCC;
 }
 body.dark {
   --main-bg-color: #1e2023;
@@ -15,4 +16,6 @@ body.dark {
   --accent-color: #14c57c;
 
   --accent-extra-color: #204136;
+   --disabled-btn: #383A3D;
 }
+
