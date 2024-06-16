@@ -93,7 +93,7 @@
   margin-bottom: 32px;
   border-radius: 8px;
   background: var(--extra-bg-color);
-  height: 96px;
+  height: 128px;
   padding: 16px;
   outline: none;
   border: none;
@@ -227,9 +227,6 @@
   }
   .work-together-address {
     flex-direction: row;
-  }
-  .work-together-comment {
-    height: 128px;
   }
   .work-together-button {
     width: 173px;
