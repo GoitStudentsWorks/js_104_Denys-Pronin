@@ -7,7 +7,7 @@
 
 .swiper-item.swiper-slide {
     height: auto;
-    background-color:  #E4E5E6;
+    background-color: var(--extra-bg-color);
     padding: 32px;
     border-radius: 16px;
     display: flex;
@@ -69,27 +69,28 @@ margin: 0;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    border: 1px solid #2929294D;
+    border: 1px solid var(--main-text-color);
+    
     border-radius: 8px;
 }
 
 
 .s-button-next:hover, .s-button-prev:hover {
-    background-color: #E4E5E6;
+    background-color: var(--extra-bg-color);
 }
 
 .icon {
    fill: none;
-stroke: black;
+stroke: var(--main-text-color);
 }
 
 .disabled>.icon {
     fill: none;
-stroke: #2929294D;
+stroke: var(--disabled-btn);
 }
 .disabled {
     pointer-events: none;
-    border-color: #2929291A;
+    border-color: var(--disabled-btn);
 }
 
 /* ===================================Mobile=================================*/
