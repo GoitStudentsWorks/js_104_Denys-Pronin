@@ -81,7 +81,7 @@
 }
 .icon-success-filled {
   position: absolute;
-  top: 50%;
+  top: 30%;
   right: 16px;
   transform: translateY(-50%);
   display: none;
