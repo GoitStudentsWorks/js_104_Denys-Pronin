@@ -44,15 +44,12 @@
 }
 
 @media screen and (min-width: 1280px) {
-  .background-image {
-    width: 526px;
-    height: 408px;
+  .benefits {
     background-image: url('../img/benefits/png/decor_bg_3@2x.png');
-    background-size: cover;
+    background-size: 581px 382px;
+    background-repeat: no-repeat;
     background-position: center;
-    position: absolute;
-    top: 410px;
-    right: 165px;
+    background-position: top right;
   }
   .benefits-title {
     width: 682px;

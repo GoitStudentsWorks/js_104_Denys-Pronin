@@ -1,3 +1,6 @@
+.about {
+  line-height: 150%;
+}
 .about__title {
   margin-bottom: 40px;
 }
@@ -24,4 +27,82 @@
 
 .about__text:not(:last-child) {
   margin-bottom: 20px;
+}
+
+.about__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.about__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.about__list-item {
+  position: relative;
+  padding-left: 32px;
+}
+
+.about__list-item::before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 1px;
+  background-color: var(--accent-color);
+  left: 10px;
+  top: 4px;
+}
+
+@media screen and (min-width: 768px) {
+  .about__bio {
+    flex-direction: row;
+    min-height: 760px;
+    margin-bottom: 60px;
+  }
+
+  .about__img {
+    height: 392px;
+    align-self: flex-end;
+  }
+
+  .about__wrapper {
+    flex-direction: row;
+    gap: 32px;
+  }
+
+  .about__wrapper > div {
+    width: 336px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .about__bio {
+    min-height: 720px;
+    gap: 136px;
+    justify-content: right;
+    margin-bottom: 80px;
+  }
+
+  .about__img {
+    width: 384px;
+    height: 448px;
+  }
+
+  .about__descr {
+    width: 488px;
+  }
+
+  .about__wrapper {
+    gap: 136px;
+    justify-content: right;
+    padding-right: 104px;
+  }
+
+  .about__wrapper > div {
+    width: 384px;
+  }
 }
