@@ -158,7 +158,7 @@
 }
 
 @media screen and (min-width: 1280px) {
-  .my-project {
+  #my-projects .my-project {
     max-width: 1072px;
   }
   .projects-title {

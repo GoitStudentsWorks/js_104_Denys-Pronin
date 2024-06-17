@@ -12,7 +12,7 @@
   margin-bottom: 40px;
 }
 
-.about__img {
+.about__img > img {
   width: 100%;
 }
 
@@ -58,6 +58,18 @@
 }
 
 @media screen and (min-width: 768px) {
+  .about__img > img {
+    width: unset;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .about {
+    background-image: url('../img/decor_bg2.png');
+    background-size: 380px 260px;
+    background-repeat: no-repeat;
+    background-position: bottom 196px right 20px;
+  }
   .about__bio {
     flex-direction: row;
     min-height: 760px;
@@ -81,6 +93,9 @@
 }
 
 @media screen and (min-width: 1280px) {
+  .about {
+    background-position: bottom 348px right 20px;
+  }
   .about__bio {
     min-height: 720px;
     gap: 136px;
