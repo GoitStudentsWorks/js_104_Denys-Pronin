@@ -1,37 +1,46 @@
+import imgUrl from '../img/my-projects/Rectangle-10.jpg';
+import imgUrl2 from '../img/my-projects/Rectangle-7.jpg';
+import imgUrl3 from '../img/my-projects/Rectangle-8.jpg';
+import imgUrl4 from '../img/my-projects/Rectangle-6.jpg';
+import imgUrl5 from '../img/my-projects/Rectangle-4.jpg';
+import imgUrl6 from '../img/my-projects/Rectangle-5.jpg';
+import imgUrl7 from '../img/my-projects/first-screen-1.jpg';
+import spriteUrl from '../img/symbol-defs.svg';
+
 document.addEventListener('DOMContentLoaded', function () {
   const projects = [
     {
-      image: '../img/my-projects/Rectangle-10.jpg',
+      image: imgUrl,
       tech: 'React, JavaScript, Node JS, Git',
       name: 'power pulse webservice ',
     },
     {
-      image: '../img/my-projects/Rectangle-7.jpg',
+      image: imgUrl2,
       tech: 'Angular, TypeScript, Node JS, Git',
       name: 'mimino website',
     },
     {
-      image: '../img/my-projects/Rectangle-8.jpg',
+      image: imgUrl3,
       tech: 'Vue, JavaScript, Node JS, Git',
       name: 'vyshyvanka vibes Landing Page',
     },
     {
-      image: '../img/my-projects/Rectangle-6.jpg',
+      image: imgUrl4,
       tech: 'React Native, JavaScript, Git',
       name: 'chego jewelry website',
     },
     {
-      image: '../img/my-projects/Rectangle-4.jpg',
+      image: imgUrl5,
       tech: 'Svelte, JavaScript, Node JS, Git',
       name: 'energy flow webservice',
     },
     {
-      image: '../img/my-projects/Rectangle-5.jpg',
+      image: imgUrl6,
       tech: 'React, JavaScript, Express, MongoDB',
       name: 'fruitbox online store',
     },
     {
-      image: '../img/my-projects/first-screen-1.jpg',
+      image: imgUrl7,
       tech: 'React, JavaScript, Express, MongoDB',
       name: 'starlight studio landing page',
     },
@@ -61,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 <h3 class="name-project">${project.name}</h3>
                 <div class="link-container">
                     <a  target="_blank" class="link-project" href="https://github.com/Denys-Pronin/IT-Hub-Portfolio">VISIT
-                        <svg stroke="#00B068" width="24" height="24"><use href="./img/symbol-defs.svg#icon-vector"></use></svg>
+                        <svg stroke="#00B068" width="24" height="24"><use href="${spriteUrl}#icon-vector"></use></svg>
                     </a>
                 </div>
                 </div>
