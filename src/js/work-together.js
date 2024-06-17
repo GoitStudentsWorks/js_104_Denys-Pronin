@@ -18,6 +18,14 @@ const formData = {
 form.addEventListener('input', event => {
   formData[event.target.name] = event.target.value.trim();
   localStorage.setItem(localStorageKey, JSON.stringify(formData));
+  const isValidEmail = emailInput.checkValidity();
+
+  if (isValidEmail) {
+    iconSuccess.style.display = 'block';
+  } else if (emailInput.value === '') {
+    emailErrorText.style.display = 'none';
+    emailInput.classList.remove('invalid');
+  } else iconSuccess.style.display = 'none';
 });
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -80,7 +88,7 @@ form.addEventListener('submit', async event => {
     } else {
       iziToast.error({
         title: 'Error',
-        message: `Error: ${response.data.message}`,
+        message: 'Error: ${response.data.message}',
       });
     }
   } catch (error) {
@@ -102,6 +110,9 @@ function validateEmail() {
     emailInput.classList.remove('invalid');
     iconSuccess.style.display = 'block';
     emailErrorText.style.display = 'none';
+  } else if (emailInput.value === '') {
+    emailErrorText.style.display = 'none';
+    emailInput.classList.remove('invalid');
   } else {
     emailInput.classList.add('invalid');
     iconSuccess.style.display = 'none';
