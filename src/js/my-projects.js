@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
     const projects = [
-        { image: './img/my-projects/Rectangle 10.jpg', tech: 'React, JavaScript, Node JS, Git', name: 'power pulse webservice ' },
-        { image: './img/my-projects/Rectangle 7.jpg', tech: 'Angular, TypeScript, Node JS, Git', name: 'mimino website' },
-        { image: './img/my-projects/Rectangle 8.jpg', tech: 'Vue, JavaScript, Node JS, Git', name: 'vyshyvanka vibes Landing Page' },
-        { image: './img/my-projects/Rectangle 6.jpg', tech: 'React Native, JavaScript, Git', name: 'chego jewelry website' },
-        { image: './img/my-projects/Rectangle 4.jpg', tech: 'Svelte, JavaScript, Node JS, Git', name: 'energy flow webservice' },
-        { image: './img/my-projects/Rectangle 5.jpg', tech: 'React, JavaScript, Express, MongoDB', name: 'fruitbox online store' },
-        { image: './img/my-projects/first screen 1.jpg', tech: 'React, JavaScript, Express, MongoDB', name: 'starlight studio landing page' }
+        { image: './img/my-projects/Rectangle-10.jpg', tech: 'React, JavaScript, Node JS, Git', name: 'power pulse webservice ' },
+        { image: './img/my-projects/Rectangle-7.jpg', tech: 'Angular, TypeScript, Node JS, Git', name: 'mimino website' },
+        { image: './img/my-projects/Rectangle-8.jpg', tech: 'Vue, JavaScript, Node JS, Git', name: 'vyshyvanka vibes Landing Page' },
+        { image: './img/my-projects/Rectangle-6.jpg', tech: 'React Native, JavaScript, Git', name: 'chego jewelry website' },
+        { image: './img/my-projects/Rectangle-4.jpg', tech: 'Svelte, JavaScript, Node JS, Git', name: 'energy flow webservice' },
+        { image: './img/my-projects/Rectangle-5.jpg', tech: 'React, JavaScript, Express, MongoDB', name: 'fruitbox online store' },
+        { image: './img/my-projects/first-screen-1.jpg', tech: 'React, JavaScript, Express, MongoDB', name: 'starlight studio landing page' }
     ];
     
     const projectsContainer = document.getElementById('project-container');
