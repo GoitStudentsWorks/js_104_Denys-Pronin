@@ -22,6 +22,8 @@ form.addEventListener('input', event => {
 
   if (isValidEmail) {
     iconSuccess.style.display = 'block';
+    emailInput.classList.remove('invalid');
+    emailErrorText.style.display = 'none';
   } else if (emailInput.value === '') {
     emailErrorText.style.display = 'none';
     emailInput.classList.remove('invalid');
@@ -125,8 +127,10 @@ function validateEmail() {
 
 function showModal() {
   modal.classList.add('is-open');
+  document.body.style.overflow = 'hidden';
 }
 
 function closeModal() {
   modal.classList.remove('is-open');
+  document.body.style.overflow = 'auto';
 }
