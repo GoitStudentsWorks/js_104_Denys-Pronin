@@ -10,42 +10,27 @@ const modal = document.querySelector('.backdrop');
 const modalCloseButton = document.querySelector('.modal-close');
 const localStorageKey = 'work-together-form-state';
 
-const isValidEmail = emailInput.checkValidity();
-
 const formData = {
   email: '',
   message: '',
 };
 
+form.addEventListener('input', event => {
+  formData[event.target.name] = event.target.value.trim();
+  localStorage.setItem(localStorageKey, JSON.stringify(formData));
+});
 
-  form.addEventListener('input', event => {
-  
-    formData[event.target.name] = event.target.value.trim();
-    localStorage.setItem(localStorageKey, JSON.stringify(formData));
-  });
-
-
-  document.addEventListener('DOMContentLoaded', () => {
-    const savedData = localStorage.getItem(localStorageKey);
-    if (savedData) {
-      form.elements.email.value = JSON.parse(savedData).email || '';
-      form.elements.message.value = JSON.parse(savedData).message || '';
-    }
-  }); 
-
-
+document.addEventListener('DOMContentLoaded', () => {
+  const savedData = localStorage.getItem(localStorageKey);
+  if (savedData) {
+    const parsedData = JSON.parse(savedData);
+    form.elements.email.value = parsedData.email || '';
+    form.elements.message.value = parsedData.message || '';
+  }
+});
 
 emailInput.addEventListener('blur', () => {
-
-  if (isValidEmail) {
-    emailInput.classList.remove('invalid');
-    iconSuccess.style.display = 'block';
-    emailErrorText.style.display = 'none';
-  } else {
-    emailInput.classList.add('invalid');
-    iconSuccess.style.display = 'none';
-    emailErrorText.style.display = 'block';
-  }
+  validateEmail();
 });
 
 form.addEventListener('submit', async event => {
@@ -58,6 +43,14 @@ form.addEventListener('submit', async event => {
     iziToast.error({
       title: 'Error',
       message: 'All fields are required.',
+    });
+    return;
+  }
+
+  if (!validateEmail()) {
+    iziToast.error({
+      title: 'Error',
+      message: 'Invalid email, try again.',
     });
     return;
   }
@@ -82,6 +75,7 @@ form.addEventListener('submit', async event => {
     if (response.status === 201) {
       showModal();
       form.reset();
+      localStorage.removeItem(localStorageKey);
       iconSuccess.style.display = 'none';
     } else {
       iziToast.error({
@@ -100,6 +94,23 @@ form.addEventListener('submit', async event => {
 modalCloseButton.addEventListener('click', () => {
   closeModal();
 });
+
+function validateEmail() {
+  const isValidEmail = emailInput.checkValidity();
+
+  if (isValidEmail) {
+    emailInput.classList.remove('invalid');
+    iconSuccess.style.display = 'block';
+    emailErrorText.style.display = 'none';
+  } else {
+    emailInput.classList.add('invalid');
+    iconSuccess.style.display = 'none';
+    emailErrorText.style.display = 'block';
+    emailErrorText.textContent = 'Invalid email, try again';
+  }
+
+  return isValidEmail;
+}
 
 function showModal() {
   modal.classList.add('is-open');
