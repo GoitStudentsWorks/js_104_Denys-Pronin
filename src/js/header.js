@@ -59,7 +59,8 @@ window.addEventListener('resize', function () {
     mobMenu.classList.remove('open');
     openMenuBtn.style.display = 'none';
     closeMenuBtn.style.display = 'none';
-    // body.style.overflow = 'auto';
+    toggleMenu(false);
+    openMenuBtn.style.display = 'none';
   } else {
     if (mobMenu.classList.contains('open')) {
       openMenuBtn.style.display = 'none';
