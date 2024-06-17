@@ -2,7 +2,37 @@
   <div class="container">
     <h2 class="title about__title">About <span class="accent">me</span></h2>
     <div class="about__bio">
-      <img src="./img/about-me/about.webp" alt="me" class="about__img" />
+      <!-- <img src="./img/about-me/about-mobile.webp" alt="me" class="about__img" /> -->
+      <picture class="about__img">
+        <!-- Desktop screen -->
+        <source
+          media="(min-width: 1280px)"
+          srcset="./img/about-me/about.webp 1x, ./img/about-me/about@2x.webp 2x"
+          type="image/webp"
+        />
+
+        <!-- Tablet screen -->
+        <source
+          media="(min-width: 768px)"
+          srcset="
+            ./img/about-me/about-tablet.webp    1x,
+            ./img/about-me/about-tablet@2x.webp 2x
+          "
+          type="image/webp"
+        />
+
+        <!-- Mobile screen -->
+
+        <source
+          media="(max-width: 767px)"
+          srcset="
+            ./img/about-me/about-mobile.webp    1x,
+            ./img/about-me/about-mobile@2x.webp 2x
+          "
+          type="image/webp"
+        />
+        <img src="./img/about-me/about.webp" alt="s" loading="lazy" />
+      </picture>
       <div class="about__descr">
         <h3 class="about__subtitle">BIO</h3>
         <p class="about__text">
