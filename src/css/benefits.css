@@ -45,8 +45,6 @@
 
 @media screen and (min-width: 1280px) {
   .benefits {
-    width: 1280px;
-    margin: 0 auto;
     background-image: url('../img/benefits/png/decor_bg_3@2x.png');
     background-size: 581px 382px;
     background-repeat: no-repeat;
@@ -91,7 +89,7 @@
   align-items: center;
   width: 48px;
   height: 48px;
-  background-color: #bcdfd1;
+  background-color: var(--accent-extra-color);
   border-radius: 8px;
   margin-bottom: 16px;
 }

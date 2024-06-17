@@ -3,7 +3,7 @@
   padding: 40px 0 24px 0;
 }
 
-.footer__logo {
+.footer__wrapper .footer__logo {
   display: block;
   font-size: 32px;
   line-height: 32px;
