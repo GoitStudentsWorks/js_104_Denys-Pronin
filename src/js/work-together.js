@@ -8,9 +8,34 @@ const iconSuccess = document.querySelector('.icon-success-filled');
 const form = document.querySelector('.work-together-form');
 const modal = document.querySelector('.backdrop');
 const modalCloseButton = document.querySelector('.modal-close');
+const localStorageKey = 'work-together-form-state';
 
-form.addEventListener('input', () => {
-  const isValidEmail = emailInput.checkValidity();
+const isValidEmail = emailInput.checkValidity();
+
+const formData = {
+  email: '',
+  message: '',
+};
+
+
+  form.addEventListener('input', event => {
+  
+    formData[event.target.name] = event.target.value.trim();
+    localStorage.setItem(localStorageKey, JSON.stringify(formData));
+  });
+
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const savedData = localStorage.getItem(localStorageKey);
+    if (savedData) {
+      form.elements.email.value = JSON.parse(savedData).email || '';
+      form.elements.message.value = JSON.parse(savedData).message || '';
+    }
+  }); 
+
+
+
+emailInput.addEventListener('blur', () => {
 
   if (isValidEmail) {
     emailInput.classList.remove('invalid');
