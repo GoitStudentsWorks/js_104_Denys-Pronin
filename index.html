@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/js_104_Denys-Pronin/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    
+    <script type="module" crossorigin src="/js_104_Denys-Pronin/commonHelpers.js"></script>
+    <link rel="modulepreload" crossorigin href="/js_104_Denys-Pronin/assets/vendor-40e976df.js">
+    <link rel="stylesheet" href="/js_104_Denys-Pronin/assets/vendor-827d51bf.css">
+    <link rel="stylesheet" href="/js_104_Denys-Pronin/assets/index-5d9108cc.css">
+  </head>
+  <body>
+    <header class="header">
+  <div class="container header-box">
+    <nav class="header-navigation">
+      <a class="header-logo" href="./index.html"
+        >Lloyd<span class="header-span">Jefferson.</span>
+      </a>
+      <label class="toggle-switch">
+        <input type="checkbox" />
+        <span class="slider"></span>
+      </label>
+      <ul class="header-list">
+        <li>
+          <a class="header-list-item" href="#about-me">About me</a>
+        </li>
+        <li>
+          <a class="header-list-item" href="#my-projects">Projects</a>
+        </li>
+        <li>
+          <a class="header-list-item" href="#work-together">Contacts</a>
+        </li>
+      </ul>
+    </nav>
+    <button type="button" class="header-open-menu-btn">
+      <svg width="32" height="32">
+        <use href="/js_104_Denys-Pronin/assets/symbol-defs-92d0f2d5.svg#icon-burger-menu"></use>
+      </svg>
+    </button>
+    <button type="button" class="menu-close-btn">
+      <svg width="32" height="32">
+        <use href="/js_104_Denys-Pronin/assets/symbol-defs-92d0f2d5.svg#icon-close-btn"></use>
+      </svg>
+    </button>
+  </div>
+
+  <div class="mob-menu">
+    <nav class="mob-menu-nav">
+      <ul class="mob-nav-list">
+        <li>
+          <a class="header-list-item" href="#about-me">About me</a>
+        </li>
+        <li>
+          <a class="header-list-item" href="#my-projects">Projects</a>
+        </li>
+        <li>
+          <a class="header-list-item" href="#work-together">Contacts</a>
+        </li>
+      </ul>
+    </nav>
+    <label class="toggle-switch switch-mob">
+      <input type="checkbox" />
+      <span class="slider"></span>
+    </label>
+  </div>
+</header>
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/hero.css">
+    <title>Hero</title>
+</head>
+<body class="">
+    <section class="section hero-section">
+        <div class="container hero-container">
+            <h1 class="hero-title title">HELLO, I AM <span class="accent">FULLSTACK DEVELOPER</span></h1>
+
+            <picture class="hero-img">
+                <source media="(min-width: 1280px)" srcset="data:image/jpeg;base64,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 1x, /js_104_Denys-Pronin/assets/hero-img-desk@2x-09cb9030.jpg 2x"/>
+                <img src="data:image/jpeg;base64,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" alt="A picture of me smiling">
+            </picture>
+
+            <div class="hero-text-wrap">
+                <a class="hero-link" href="#work-together">
+                    <svg class="hero-link-icon" width="30" height="30">
+                        <use href="/js_104_Denys-Pronin/assets/symbol-defs-92d0f2d5.svg#icon-Arrow-1"></use>
+                    </svg><span class="hero-link-text hero-text">ORDER THE PROJECT</span>
+                </a>
+
+                <p class="hero-text">I WORK FOR PEOPLE ALL OVER THE WORLD TO CREATE <span class="accent">IMPRESSIVE</span> AND <span class="accent">FUNCTIONAL WEBSITES</span> THAT REFLECT EACH CLIENT'S UNIQUE PERSONALITY.</p>
+            </div>
+        </div>
+        
+        <ul class="hero-socials">
+            <li class="hero-socials-item"><a href="https://www.instagram.com/goitclub/" target="_blank" rel="noreferrer noopener nofollow">Instagram</a></li>
+            <li class="hero-socials-item"><a href="https://www.facebook.com/goITclub/" target="_blank" rel="noreferrer noopener nofollow">Facebook</a></li>
+            <li class="hero-socials-item"><a href="https://www.linkedin.com/school/goit-start-your-career-in-it" target="_blank" rel="noreferrer noopener nofollow">LinkedIn</a></li>
+            <li class="hero-socials-item"><a href="https://github.com/Denys-Pronin/IT-Hub-Portfolio" target="_blank" rel="noreferrer noopener nofollow">GitHub</a></li>
+        </ul>
+    </section>
+</body>
+</html>
+
+    <section class="section about" id="about-me">
+  <div class="container">
+    <h2 class="title about__title">About <span class="accent">me</span></h2>
+    <div class="about__bio">
+      <!-- <img src="./img/about-me/about-mobile.webp" alt="me" class="about__img" /> -->
+      <picture class="about__img">
+        <!-- Desktop screen -->
+        <source
+          media="(min-width: 1280px)"
+          srcset="/js_104_Denys-Pronin/assets/about-b9621019.webp 1x, /js_104_Denys-Pronin/assets/about@2x-633c29c7.webp 2x"
+          type="image/webp"
+        />
+
+        <!-- Tablet screen -->
+        <source
+          media="(min-width: 768px)"
+          srcset="/js_104_Denys-Pronin/assets/about-tablet-23e9fb89.webp 1x, /js_104_Denys-Pronin/assets/about-tablet@2x-a1698ec5.webp 2x"
+          type="image/webp"
+        />
+
+        <!-- Mobile screen -->
+
+        <source
+          media="(max-width: 767px)"
+          srcset="/js_104_Denys-Pronin/assets/about-mobile-26b3948f.webp 1x, /js_104_Denys-Pronin/assets/about-mobile@2x-507d0e0e.webp 2x"
+          type="image/webp"
+        />
+        <img src="/js_104_Denys-Pronin/assets/about-b9621019.webp" alt="s" loading="lazy" />
+      </picture>
+      <div class="about__descr">
+        <h3 class="about__subtitle">BIO</h3>
+        <p class="about__text">
+          I'm Lloyd Jefferson, a talented programmer specializing in software
+          development. My expertise spans various programming languages and
+          technologies, and I am dedicated to continually enhancing my skills. I
+          thrive on seeking unconventional and creative solutions to problems,
+          leveraging a high level of analytical skills to effectively tackle
+          even the most challenging tasks.
+        </p>
+        <p class="about__text">
+          Adaptable to both independent and team-oriented work, I collaborate
+          seamlessly with colleagues, exchanging ideas and finding optimal
+          solutions. My professional maturity enables me to navigate challenges
+          and stressful situations with a calm demeanor, maintaining a
+          consistently high quality of work. Committed to self-improvement, I
+          actively engage in studying new technologies and practices to stay
+          current with the latest innovations in the field.
+        </p>
+      </div>
+    </div>
+    <div class="about__wrapper">
+      <div>
+        <h3 class="about__subtitle">EDUCATION</h3>
+        <ul class="about__list">
+          <li class="about__list-item">
+            2018 - 2019 / Frontend Development Diploma, GoIT IT School, New York
+          </li>
+          <li class="about__list-item">
+            2019 - 2020 / Advanced Web Development Certificate, GoIT IT School,
+            New York
+          </li>
+          <li class="about__list-item">
+            2020 - 2022 / Advanced Blender Animation Techniques, Udemy
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="about__subtitle">ROLE</h3>
+        <ul class="about__list">
+          <li class="about__list-item">Frontend development</li>
+          <li class="about__list-item">HeadlessCMS, Wordpress</li>
+          <li class="about__list-item">Blender (enjoy)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section class="section tech-skill_section">
+  <h2 class="tech-skill-hide">Tech Skills</h2>
+  <div class="marquee">
+    <div class="marquee__inner">
+      <ul class="marquee__line">
+        <li>HTML/CSS</li>
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>Node. js</li>
+        <li>React Native</li>
+        <li>Typescript</li>
+      </ul>
+      <ul class="marquee__line">
+        <li>HTML/CSS</li>
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>Node. js</li>
+        <li>React Native</li>
+        <li>Typescript</li>
+      </ul>
+    </div>
+  </div>
+  <div class="marquee marguee_extra">
+    <div class="marquee__inner">
+      <ul class="marquee__line marquee__line_reverse">
+        <li>HTML/CSS</li>
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>Node. js</li>
+        <li>React Native</li>
+        <li>Typescript</li>
+      </ul>
+      <ul class="marquee__line marquee__line_reverse">
+        <li>HTML/CSS</li>
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>Node. js</li>
+        <li>React Native</li>
+        <li>Typescript</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+    <section id="my-projects">
+  <div class="container my-project">
+    <h2 class="projects-title">
+      MY
+      <span>PROJECTS</span>
+    </h2>
+
+    <div class="card">
+      <ul class="project-container" id="project-container">
+        <li>
+          <div class="image-wrapper">
+            <img src="/js_104_Denys-Pronin/assets/Rectangle-11-c8db5eda.jpg" alt="my-project" />
+          </div>
+          <div class="text-container">
+            <p class="stack-teh">React, JavaScript, Node JS, Git</p>
+            <div class="text-button">
+              <h3 class="name-project">Wallet webservice</h3>
+              <div class="link-container">
+                <a
+                  target="_blank"
+                  class="link-project"
+                  href="https://github.com/Denys-Pronin/IT-Hub-Portfolio"
+                  >VISIT
+                  <svg stroke="#00B068" width="24" height="24">
+                    <use href="/js_104_Denys-Pronin/assets/symbol-defs-92d0f2d5.svg#icon-vector"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <div class="image-wrapper">
+            <img src="/js_104_Denys-Pronin/assets/Rectangle-9-e90d60cf.jpg" alt="my-project" />
+          </div>
+          <div class="text-container">
+            <p class="stack-teh">React, JavaScript, Node JS, Git</p>
+            <div class="text-button">
+              <h3 class="name-project">Green harvest webservice</h3>
+              <div class="link-container">
+                <a
+                  target="_blank"
+                  class="link-project"
+                  href="https://github.com/Denys-Pronin/IT-Hub-Portfolio"
+                  >VISIT
+                  <svg stroke="#00B068" width="24" height="24">
+                    <use href="/js_104_Denys-Pronin/assets/symbol-defs-92d0f2d5.svg#icon-vector"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <div class="image-wrapper">
+            <img src="/js_104_Denys-Pronin/assets/Rectangle-12-f834b4d5.jpg" alt="my-project" />
+          </div>
+          <div class="text-container">
+            <p class="stack-teh">React, JavaScript, Node JS, Git</p>
+            <div class="text-button">
+              <h3 class="name-project">English Exellence website</h3>
+              <div class="link-container">
+                <a
+                  target="_blank"
+                  class="link-project"
+                  href="https://github.com/Denys-Pronin/IT-Hub-Portfolio"
+                  >VISIT
+                  <svg stroke="#00B068" width="24" height="24">
+                    <use href="/js_104_Denys-Pronin/assets/symbol-defs-92d0f2d5.svg#icon-vector"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <button id="load-more-button" class="load-more">LOAD MORE</button>
+  </div>
+</section>
+
+    <section class="section benefits" id="benefits-section">
+  <div class="container">
+    <h2 class="title benefits-title">
+      <span class="accent">benefits</span> of working with me
+    </h2>
+    <div class="background-image"></div>
+    <div class="container-benefits-list">
+      <ul class="benefits-list">
+        <li class="benefits-list-item">
+          <div class="item-icon">
+            <svg class="benefit-icon" width="24" height="24">
+              <use href="/js_104_Denys-Pronin/assets/symbol-defs-92d0f2d5.svg#icon-expertise"></use>
+            </svg>
+          </div>
+          Expertise
+          <p class="item-text">
+            With extensive experience in development, I have a deep
+            understanding of programming and website development.
+          </p>
+        </li>
+        <li class="benefits-list-item">
+          <div class="item-icon">
+            <svg class="benefit-icon" width="24" height="24">
+              <use href="/js_104_Denys-Pronin/assets/symbol-defs-92d0f2d5.svg#icon-communication"></use>
+            </svg>
+          </div>
+          Communication
+          <p class="item-text">
+            Understanding your needs and wants is my priority and I am always
+            available for discussions and open to corrections.
+          </p>
+        </li>
+        <li class="benefits-list-item">
+          <div class="item-icon">
+            <svg class="benefit-icon" width="24" height="24">
+              <use href="/js_104_Denys-Pronin/assets/symbol-defs-92d0f2d5.svg#icon-art"></use>
+            </svg>
+          </div>
+          Art
+          <p class="item-text">
+            Thanks to my creative nature, I am ready to accept challenges and
+            help you bring your ideas to life.
+          </p>
+        </li>
+        <li class="benefits-list-item">
+          <div class="item-icon">
+            <svg class="benefit-icon" width="24" height="24">
+              <use href="/js_104_Denys-Pronin/assets/symbol-defs-92d0f2d5.svg#icon-hourglass"></use>
+            </svg>
+          </div>
+          Urgent execution
+          <p class="item-text">
+            I understand how important time is to you. Ready to work quickly and
+            efficiently, without reducing the quality of work.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+    <section class="faq section">
+  <div class="container">
+    <h2 class="faq-title">
+      frequently asked <span class="faq-title-color">question</span>
+    </h2>
+    <ul class="faq-list">
+      <li class="ac">
+        <h2 class="ac-header">
+          <button type="button" class="ac-trigger">
+            What programming languages ​​are most often used in your project?
+            <svg class="button-svg" width="24" height="24">
+              <use href="/js_104_Denys-Pronin/assets/symbol-defs-92d0f2d5.svg#icon-button-down"></use>
+            </svg>
+          </button>
+        </h2>
+        <div class="ac-panel">
+          <p class="ac-text">
+            In the field of web development, there are various technologies and
+            programming languages. Typically, this includes a combination of
+            frontend (client side) and backend (server side) languages.
+          </p>
+        </div>
+      </li>
+      <li class="ac">
+        <h2 class="ac-header">
+          <button type="button" class="ac-trigger">
+            What are the deadlines for the project?
+            <svg class="button-svg" width="24" height="24">
+              <use href="/js_104_Denys-Pronin/assets/symbol-defs-92d0f2d5.svg#icon-button-down"></use>
+            </svg>
+          </button>
+        </h2>
+        <div class="ac-panel">
+          <p class="ac-text">
+            The terms of project implementation depend to a large extent on a
+            number of factors, such as the scope of the project, its complexity,
+            and the availability of resources. Determining exact deadlines is a
+            difficult task, and it usually occurs during the planning phase of
+            the project.
+          </p>
+        </div>
+      </li>
+      <li class="ac">
+        <h2 class="ac-header">
+          <button type="button" class="ac-trigger">
+            What payment methods do you accept?
+            <svg class="button-svg" width="24" height="24">
+              <use href="/js_104_Denys-Pronin/assets/symbol-defs-92d0f2d5.svg#icon-button-down"></use>
+            </svg>
+          </button>
+        </h2>
+        <div class="ac-panel">
+          <p class="ac-text">
+            Payment through credit and debit cards such as Visa, MasterCard,
+            specialized electronic payment systems such as PayPal, as well as
+            payments in cryptocurrencies such as Bitcoin, Ethereum and others.
+          </p>
+        </div>
+      </li>
+      <li class="ac">
+        <h2 class="ac-header">
+          <button type="button" class="ac-trigger">
+            How can I contact you?
+            <svg class="button-svg" width="24" height="24">
+              <use href="/js_104_Denys-Pronin/assets/symbol-defs-92d0f2d5.svg#icon-button-down"></use>
+            </svg>
+          </button>
+        </h2>
+        <div class="ac-panel">
+          <p class="ac-text">
+            In the field of web development, there are various technologies and
+            programming languages. Typically, this includes a combination of
+            frontend (client side) and backend (server side) languages.
+          </p>
+        </div>
+      </li>
+      <li class="ac">
+        <h2 class="ac-header">
+          <button type="button" class="ac-trigger">
+            Do you provide advice or support?
+            <svg class="button-svg" width="24" height="24">
+              <use href="/js_104_Denys-Pronin/assets/symbol-defs-92d0f2d5.svg#icon-button-down"></use>
+            </svg>
+          </button>
+        </h2>
+        <div class="ac-panel">
+          <p class="ac-text">
+            The terms of project implementation depend to a large extent on a
+            number of factors, such as the scope of the project, its complexity,
+            and the availability of resources. Determining exact deadlines is a
+            difficult task, and it usually occurs during the planning phase of
+            the project.
+          </p>
+        </div>
+      </li>
+      <li class="ac">
+        <h2 class="ac-header">
+          <button type="button" class="ac-trigger">
+            What does the process of developing a software product look like
+            from idea to implementation?
+            <svg class="button-svg" width="24" height="24">
+              <use href="/js_104_Denys-Pronin/assets/symbol-defs-92d0f2d5.svg#icon-button-down"></use>
+            </svg>
+          </button>
+        </h2>
+        <div class="ac-panel">
+          <p class="ac-text">
+            Payment through credit and debit cards such as Visa, MasterCard,
+            specialized electronic payment systems such as PayPal, as well as
+            payments in cryptocurrencies such as Bitcoin, Ethereum and others.
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+    <section class="section" id="reviews">
+  <div class="container reviews">
+  <h2 class="title title-reviews">REVIEWS</h2>
+  <div class="swiper">
+    <ul class="mySwiper swiper-wrapper"></ul>
+    <div class="slider-navigator">
+      <div class="s-button-prev">
+        <svg class="icon" width="20" height="20">
+          <use href="/js_104_Denys-Pronin/assets/symbol-defs-92d0f2d5.svg#icon-arrow-narrow-left"></use>
+        </svg>
+      </div>
+      <div class="s-button-next">
+        <svg class="icon" width="20" height="20">
+          <use href="/js_104_Denys-Pronin/assets/symbol-defs-92d0f2d5.svg#icon-arrow-narrow-right1"></use>
+        </svg>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+    <section class="work-together section">
+  <div class="container work-together-container">
+    <h2 class="title work-together-title" id="work-together">
+      let’s <span>work together</span>
+    </h2>
+    <div class="desktop-wrapper">
+      <div class="desktop-wrapper-contacts">
+        <p class="work-together-description">
+          Contact me to transform your ideas into exceptional solutions.
+        </p>
+        <div class="work-together-address-wrap">
+          <ul class="work-together-address">
+            <li class="work-together-address-item">
+              <svg class="address-icon" width="24" height="24">
+                <use href="/js_104_Denys-Pronin/assets/symbol-defs-92d0f2d5.svg#icon-phone"></use>
+              </svg>
+              <a class="work-together-address-link" href="tel:+380904567890"
+                >+38 090 456 78 90</a
+              >
+            </li>
+            <li class="work-together-address-item">
+              <svg class="address-icon" width="24" height="24">
+                <use href="/js_104_Denys-Pronin/assets/symbol-defs-92d0f2d5.svg#icon-mail"></use>
+              </svg>
+              <a
+                class="work-together-address-link"
+                href="mailto:lloydjefferson@gmail.com"
+                >lloydjefferson@gmail.com</a
+              >
+            </li>
+            <li class="work-together-address-item">
+              <svg class="address-icon" width="24" height="24">
+                <use href="/js_104_Denys-Pronin/assets/symbol-defs-92d0f2d5.svg#icon-location"></use>
+              </svg>
+              <a
+                class="work-together-address-link"
+                href="https://maps.app.goo.gl/eVN1iJDqsbyuEgCs9"
+                target="_blank"
+              >
+                USA, New York
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="work-together-wrapper">
+        <div class="work-together-form-column">
+          <form action="" class="work-together-form">
+            <div class="input-wrapper">
+              <input
+                class="work-together-email"
+                required
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Your email*"
+                pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+              />
+              <svg class="icon-success-filled" width="16" height="16">
+                <use href="/js_104_Denys-Pronin/assets/symbol-defs-92d0f2d5.svg#icon-success-filled"></use>
+              </svg>
+              <p class="email-error-text">Invalid email, try again</p>
+            </div>
+            <textarea
+              class="work-together-comment"
+              name="message"
+              id="textarea"
+              cols="10"
+              rows="4"
+              placeholder="Message"
+            ></textarea>
+            <button
+              class="work-together-button"
+              type="submit"
+              aria-label="Send"
+            >
+              SEND MESSAGE
+            </button>
+          </form>
+          <div class="backdrop">
+            <div class="form-modal">
+              <h2 class="modal-title">
+                <span class="accent"
+                  >Thank you for your interest in cooperation!</span
+                >
+              </h2>
+              <p class="modal-text">
+                The manager will contact you shortly to discuss further details
+                and opportunities for cooperation. Please stay in touch.
+              </p>
+              <button class="modal-close">
+                <svg class="icon-close-btn" width="24" height="24">
+                  <use href="/js_104_Denys-Pronin/assets/symbol-defs-92d0f2d5.svg#icon-close-btn"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <footer class="footer">
+  <div class="container">
+    <div class="footer__wrapper">
+      <a href="index.html" class="title footer__logo">
+        Lloyd<span class="accent">Jefferson.</span>
+      </a>
+      <ul class="footer__list">
+        <li>
+          <a
+            target="_blank"
+            class="footer__link"
+            href="https://www.instagram.com/goitclub/"
+            >Instagram</a
+          >
+        </li>
+        <li>
+          <a
+            target="_blank"
+            class="footer__link"
+            href="https://www.facebook.com/goITclub/"
+            >Facebook</a
+          >
+        </li>
+        <li>
+          <a
+            target="_blank"
+            class="footer__link"
+            href="https://www.linkedin.com/school/goit-start-your-career-in-it"
+            >Linkedin</a
+          >
+        </li>
+        <li>
+          <a
+            target="_blank"
+            class="footer__link"
+            href="https://github.com/Denys-Pronin/IT-Hub-Portfolio"
+            >GitHub</a
+          >
+        </li>
+      </ul>
+    </div>
+    <div class="footer__copyright">
+      © Copyright 2024. <span>Made by LloydJefferson</span>
+    </div>
+  </div>
+</footer>
+
+
+    
+    
+    
+    
+    
+  </body>
+</html>
